@@ -1,0 +1,2 @@
+# docs
+Vaunt Documentation

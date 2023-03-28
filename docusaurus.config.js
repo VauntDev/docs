@@ -14,7 +14,7 @@ const config = {
   url: 'https://docs.vaunt.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -38,14 +38,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: "./docs",
+          routeBasePath: "/",         
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/vauntDev/docs',
-        },
-        blog: {
-          showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -67,10 +62,10 @@ const config = {
           alt: 'Vaunt Logo',
           src: 'img/vaunt-nav-logo-light.png',
           srcDark: 'img/vaunt-nav-logo-dark.png',
+          href: '/docs/',
         },
         items: [
-          { to: '/blog', label: 'Blog', position: 'left' },
-          { to: '/docs/introduction/overview', label: 'Documentation', position: 'left' },
+          { to: '/introduction/overview', label: 'Documentation', position: 'left' },
           {
             href: 'https://github.com/vauntDev/docs',
             label: 'GitHub',
@@ -87,11 +82,11 @@ const config = {
             items: [
               {
                 label: 'Overview',
-                to: '/docs/introduction/overview',
+                to: '/introduction/overview',
               },
               {
                 label: 'Installation',
-                to: '/docs/introduction/installation',
+                to: '/introduction/installation',
               },
               {
                 label: 'Example',
@@ -121,11 +116,11 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                href: 'https://blog.vaunt.dev',
               },
               {
                 label: 'Vaunt',
-                href: 'https://www.vaunt.dev',
+                href: 'https://vaunt.dev',
               },
             ],
           },

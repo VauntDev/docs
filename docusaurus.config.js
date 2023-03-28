@@ -14,7 +14,7 @@ const config = {
   url: 'https://docs.vaunt.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -62,7 +62,7 @@ const config = {
           alt: 'Vaunt Logo',
           src: 'img/vaunt-nav-logo-light.png',
           srcDark: 'img/vaunt-nav-logo-dark.png',
-          href: '/docs/',
+          href: '/',
         },
         items: [
           { to: '/', label: 'Documentation', position: 'left' },
@@ -128,9 +128,16 @@ const config = {
             title: 'Legal',
             items: [
               {
-                label: 'Privacy',
-                href: 'https://www.vaunt.dev',
+                html: `
+                <p>
+                Vaunt.dev is a dev community resource tool created by Kochava Studio, the R&D arm of Kochava, Inc
+                </p>
+              `, 
               },
+              {
+                label: 'Web Site Privacy Policy',
+                href: 'https://www.vaunt.dev',
+              }
             ],
           },
         ],

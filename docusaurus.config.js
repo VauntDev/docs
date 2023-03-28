@@ -65,7 +65,7 @@ const config = {
           href: '/docs/',
         },
         items: [
-          { to: '/introduction/overview', label: 'Documentation', position: 'left' },
+          { to: '/', label: 'Documentation', position: 'left' },
           {
             href: 'https://github.com/vauntDev/docs',
             label: 'GitHub',
@@ -82,7 +82,7 @@ const config = {
             items: [
               {
                 label: 'Overview',
-                to: '/introduction/overview',
+                to: '/',
               },
               {
                 label: 'Installation',

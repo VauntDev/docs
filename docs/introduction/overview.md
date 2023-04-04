@@ -4,8 +4,6 @@ sidebar_position: 1
 slug: /
 ---
 
----
-
 Vaunt is a developer relations platform that is designed to help developers connect, collaborate, and share experiences with each other.  
 
 Vaunt is designed for two primary audiences:
@@ -24,7 +22,7 @@ Establishing a community that contributes back to the project, over time, often 
     
 * **Broader adoption**: Open-source projects often have a wider user base due to their accessibility and low cost. This can lead to more widespread adoption and use of the technology.
     
-* **Improved quality**: Open-source communities often have a rigorous review process for contributions, which can lead to higher quality code and fewer bugs.
+* **Improved quality**: Open-source communities often have a rigorous review process for contributions, which can lead to higher-quality code and fewer bugs.
     
 * **Increased visibility**: Building an open-source community can help to promote a project and increase its visibility. This can lead to more partnerships, funding opportunities, and community engagement.
     
@@ -41,7 +39,14 @@ Vant helps solve the following problems
 * **Maintaining Projects** Open source technology generally gets more utilization. This utilization typically results in large amounts of feature requests or bug escalations. The effort to keep up with these requests increases as the project becomes more widely adopted. Leverage a developer community is crucial to the project's success and longevity 
 
 
-## *Vaunt is in active development and will be launched very soon stay tuned!*
+# Next Steps 
 
-Consider joining our [discord](https://discord.gg/mn29Xkvry2) or follow us on [Twitter](https://twitter.com/VauntDev)
-so you do not miss our offical launch!
+Head over to our [installation](installation.md) guide to get started!
+___
+
+:::info
+
+Consider joining our [discord](https://discord.gg/mn29Xkvry2) or following us on [Twitter](https://twitter.com/VauntDev)
+so you do not miss our official launch!
+
+:::

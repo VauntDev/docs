@@ -30,6 +30,7 @@ Returns a [Entity Detials Object](./objects.md#entity-details)
 
 ## Optional Query Parameters
 - provider: VCS provider 
+- private: include private contributions 
 - limit: limit of data returned (max 100)
 - after: cursor position indication data should be returned that is older 
 - before: cursor position indication data should be returned that is new 
@@ -37,6 +38,6 @@ Returns a [Entity Detials Object](./objects.md#entity-details)
 
 ## example 
 ```bash
-curl https://api.vaunt.dev/entities/{{name}}/contributions?format=svg
+curl https://api.vaunt.dev/entities/{{name}}/contributions?format=svg,private=true
 ```
 

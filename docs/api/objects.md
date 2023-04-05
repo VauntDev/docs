@@ -1,5 +1,6 @@
 ---
 sidebar_label: "Objects"
+title: objects
 sidebar_position: 2
 ---
 

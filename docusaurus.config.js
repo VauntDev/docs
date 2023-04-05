@@ -141,7 +141,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Vaunt Dev`,
+        copyright: `Copyright © ${new Date().getFullYear()} Kochava`,
       },
       prism: {
         theme: lightCodeTheme,

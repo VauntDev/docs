@@ -15,19 +15,19 @@ Once you have created a user repository with a readme file, simply add the follo
 ```html
 <p>
     <a href="https://vaunt.dev">
-        <img src="https://api.vaunt.dev/entities/{{github_username}}/contributions?format=svg" width="350" title="Includes public contributions"/>
+        <img src="https://api.vaunt.dev/v1/github/entities/{{github_username}}/contributions?format=svg" width="350" title="Includes public contributions"/>
     </a>
 </p>
 ```
 
 Optionally, you can include private repositories by passing `private=true` as a query parameter
 
-Here is an updated example **including** private contributions. 
+Here is an updated example **including** private contributions.
 
 ```html
 <p>
     <a href="https://vaunt.dev">
-        <img src="https://api.vaunt.dev/entities/{{github_username}}/contributions?format=svg&private=true" width="350" title="Includes public and private contributions" />
+        <img src="https://api.vaunt.dev/v1/github/entities/{{github_username}}/contributions?format=svg&private=true" width="350" title="Includes public and private contributions" />
     </a>
 </p>
 ```

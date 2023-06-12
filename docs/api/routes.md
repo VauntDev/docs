@@ -108,7 +108,7 @@ Returns a [Repository Details Object](./objects.md#repository-details)
 
 ## Headers
 
-- Authorization: "Bearer <YOUR-TOKEN>"
+- Authorization: "Bearer \<YOUR-TOKEN\>"
 Optional authorization using a Vaunt JWT to include private repositories.
 
 ## example
@@ -135,7 +135,7 @@ Returns a [Contributors Details Object](./objects.md#contributor-details)
 
 ## Headers
 
-- Authorization: "Bearer <YOUR-TOKEN>"
+- Authorization: "Bearer \<YOUR-TOKEN\>"
 Authorization required for private repositories.
 
 ## example

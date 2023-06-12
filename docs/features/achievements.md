@@ -4,7 +4,12 @@ title: Achievements
 sidebar_position: 2
 ---
 
+<<<<<<< HEAD
 Achievements are a way for developers or organizations to incentivize other developers to make contributions to their repositories. By using a Vaunt achievements config you can enable a set of achievements for contributors to your repository.  Developers can showcase their own achievements or a repository can showcase the achievements earned
+=======
+Achievements are a way for developers or organizations to incentivize other developers to make contributions to their repositories. By using a Vaunt achievements config
+you can enable a set of achievements for contributors to your repository.  Developers can showcase their own achievements or a repository can showcase the achievements earned
+>>>>>>> 929fc422949b9f0b4f0436693958ac6cf4d5a50f
 by contributors.
 
 ## Example

@@ -16,7 +16,6 @@ Objects are returned from the API in Json format uses snake case.
 |-------|------|-------------|
 | github | string | GitHub vcs provider |
 
-
 # Response
 
 | field | type | description |
@@ -55,6 +54,20 @@ Data types is a metadata value that describes the type of data found in the
 | CreatedDttm | date time | Date entity was added to Vaunt. |
 | UpdatedDttm | date time | Last updated time to an entity in Vaunt. |
 
+# Contributor Details
+| field | type | description |
+|-------|------|-------------|
+| Id | UUID, string | Vaunt UUID of the eContributorntity  |
+| Provider | string | VCS provider :: GitHub |
+| Type |  string |  Contributor type :: organization, user, bot |
+| Name | string | name of the Contributor |
+| DisplayName | string | display name of the Contributor |
+| URL   | string | URL of the Contributor |
+| AvatarURL | string | URL pointing to the Contributors avatar icon |
+| Contributions | int64,| number of contributions |
+| CreatedDttm | date time | Date Contributor was added to Vaunt. |
+
+
 # Contribution Summary
 
 | field | type | description |
@@ -68,6 +81,17 @@ Data types is a metadata value that describes the type of data found in the
 | IssuesClosed | uint64 | total closed issues |
 | PullRequestsMerged | uint64 | total pull requests merged |
 | DiscussionsAnswered | uint64 | total answered discussions |
+
+# Achievement Awarded Details
+
+| field | type | description |
+|-------|------|-------------|
+| Id | UUID, string  | id of the achievement
+| RepositoryName | string | achievement Repository name |
+| Name | string | total pull requests |
+| IconUrl | string | url of achievement icon |
+| Description | string | description of the achievement |
+| AwardedDttm | date time | time the achievement was awarded |
 
 # Error Response
 

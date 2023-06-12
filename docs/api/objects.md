@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::info
 
-Objects are returned from the API in Json format uses snake case.
+Objects are returned from the API in JSON format using snake case.
 
 :::
 
@@ -26,12 +26,14 @@ Objects are returned from the API in Json format uses snake case.
 | Error | Object, [ErrorResponse](#error-response) | Error response containing information about the cause, **omittable** |
 
 # Meta Data
+
 | field | type | description |
 |-------|------|-------------|
 | Count | int | number of records in the response data array |
 | DataType | int | [Object type](#data-types) of data from in the response data array |
 
 # Data Types
+
 Data types is a metadata value that describes the type of data found in the
 
 | value | type |
@@ -40,6 +42,7 @@ Data types is a metadata value that describes the type of data found in the
 | 1 | [EntityDetails](#entity-details) |
 
 # Entity Details
+
 | field | type | description |
 |-------|------|-------------|
 | Id | UUID, string | Vaunt UUID of the entity  |
@@ -54,7 +57,30 @@ Data types is a metadata value that describes the type of data found in the
 | CreatedDttm | date time | Date entity was added to Vaunt. |
 | UpdatedDttm | date time | Last updated time to an entity in Vaunt. |
 
+# Repository Details
+
+| field | type | description |
+|-------|------|-------------|
+| Id | UUID, string | Vaunt UUID of the repository  |
+| Provider | string | VCS provider :: GitHub |
+| Owner | string | name of the repository owner |
+| Name | string | name of the repository |
+| URL | string | URL of the repository |
+| Deleted | boolean | whether this repo has been deleted |
+| Fork | boolean | whether this is a fork |
+| Forks | int64 | number of times this repo has been forked |
+| Private | boolean | whether this is a private repository |
+| Description | string | the description of the repository |
+| Language | string | primary language of the repository |
+| OpenIssues | int64 | number of open issues |
+| Stars | int64 | number of stars |
+| Size | int64 | size of the repository |
+| License | string | the name of the license used by the repository |
+| DefaultBranchName | string | the name of the default branch used by the repository |
+| CreatedDttm | date time | Date entity was added to Vaunt. |
+
 # Contributor Details
+
 | field | type | description |
 |-------|------|-------------|
 | Id | UUID, string | Vaunt UUID of the eContributorntity  |
@@ -66,7 +92,6 @@ Data types is a metadata value that describes the type of data found in the
 | AvatarURL | string | URL pointing to the Contributors avatar icon |
 | Contributions | int64,| number of contributions |
 | CreatedDttm | date time | Date Contributor was added to Vaunt. |
-
 
 # Contribution Summary
 

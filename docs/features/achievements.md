@@ -4,8 +4,7 @@ title: Achievements
 sidebar_position: 2
 ---
 
-Achievements are a way for developers or organizations to incentivize other developers to make contributions to their repositories. By using a Vaunt achievements config
-you can enable a set of achievements for contributors to your repository.  Developers can showcase their own achievements or a repository can showcase the achievements earned
+Achievements are a way for developers or organizations to incentivize other developers to make contributions to their repositories. By using a Vaunt achievements config you can enable a set of achievements for contributors to your repository.  Developers can showcase their own achievements or a repository can showcase the achievements earned
 by contributors.
 
 ## Example
@@ -81,8 +80,14 @@ There are several fields to a trigger that allow you to customize the exact requ
 
 #### Actor
 
-The Actor controls the subject of the condition. For most actions this will be the author.
-However, for pull_request specifically this can also be set to reviewers or assignees and for issues this may be set to resolved_by.
+The Actor controls the subject of the condition. For most actions this will be the author.However, for pull_request specifically this can also be set to reviewers or assignees and for issues this may be set to resolved_by.
+
+| Actor | Supported Actions |
+|-------|-------------------|
+| author | pull_request, review, commit, issue, discussion, star |
+| resolved_by | issue |
+| assignees | pull_request, issue |
+| reviewers | pull_request |
 
 #### Action
 

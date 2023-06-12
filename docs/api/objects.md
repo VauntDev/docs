@@ -83,7 +83,7 @@ Data types is a metadata value that describes the type of data found in the
 
 | field | type | description |
 |-------|------|-------------|
-| Id | UUID, string | Vaunt UUID of the eContributorntity  |
+| Id | UUID, string | Vaunt UUID of the Contributor |
 | Provider | string | VCS provider :: GitHub |
 | Type |  string |  Contributor type :: organization, user, bot |
 | Name | string | name of the Contributor |
@@ -97,7 +97,7 @@ Data types is a metadata value that describes the type of data found in the
 
 | field | type | description |
 |-------|------|-------------|
-| Commits | uint64 | total commits
+| Commits | uint64 | total commits |
 | Issues | uint64 | total issues |
 | PullRequests | uint64 | total pull requests |
 | Reviews | uint64 | total reviews |
@@ -111,12 +111,30 @@ Data types is a metadata value that describes the type of data found in the
 
 | field | type | description |
 |-------|------|-------------|
-| Id | UUID, string  | id of the achievement
+| Id | UUID, string | id of the achievement |
 | RepositoryName | string | achievement Repository name |
 | Name | string | total pull requests |
 | IconUrl | string | url of achievement icon |
 | Description | string | description of the achievement |
 | AwardedDttm | date time | time the achievement was awarded |
+
+# Key
+
+| field | type | description |
+|-------|------|-------------|
+| Key | string | the public key for an entity used to validate JWT signatures |
+
+# Key ID
+
+| field | type | description |
+|-------|------|-------------|
+| Id | string | the id (Sha256 Hash) of the public key |
+
+# Token
+
+| field | type | description |
+|-------|------|-------------|
+| Token | string | the Vaunt token that can be used for authorization for a specific entity |
 
 # Error Response
 

@@ -91,6 +91,66 @@ Returns a [Achievement Awarded Object](./objects.md#achievement-awarded-details)
 curl https://api.vaunt.dev/v1/{provider}/entities/{name}/achievements?format=svg&limit=10
 ```
 
+# Get Entity Keys v1/{provider}/entities/{name}/keys
+
+Returns a [Key Object](./objects.md#key)
+
+## Required Fields
+
+- provider: (i.e github)
+- name: name of the entity to be looked up (i.e GitHub username)
+
+## Headers
+
+- Authorization: "Bearer <YOUR-TOKEN\>"
+Required authorization using a Vaunt JWT.
+
+## example
+
+```bash
+curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/keys
+```
+
+# Put Entity Keys v1/{provider}/entities/{name}/keys
+
+Sets a [Key Object](./objects.md#key) and returns the [Key Id](./objects.md#key-id)
+
+## Required Fields
+
+- provider: (i.e github)
+- name: name of the entity to be looked up (i.e GitHub username)
+
+## Headers
+
+- Authorization: "Bearer <PROVIDER-TOKEN\>"
+Required authorization using a provider Personal Access Token.
+
+## example
+
+```bash
+curl -X PUT -H "Authorization: Bearer <PROVIDER-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/keys --data '{ "data": {"key": "<YOUR-KEY>"}}'
+```
+
+# Get Entity Token v1/{provider}/entities/{name}/token
+
+Returns a [Token](./objects.md#token)
+
+## Required Fields
+
+- provider: (i.e github)
+- name: name of the entity to be looked up (i.e GitHub username)
+
+## Headers
+
+- Authorization: "Bearer <PROVIDER-TOKEN\>"
+Required authorization using a provider Personal Access Token.
+
+## example
+
+```bash
+curl -H "Authorization: Bearer <PROVIDER-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/token
+```
+
 # Get Entity Repositories  v1/{provider}/entities/{name}/repositories
 
 Returns a [Repository Details Object](./objects.md#repository-details)
@@ -108,13 +168,13 @@ Returns a [Repository Details Object](./objects.md#repository-details)
 
 ## Headers
 
-- Authorization: "Bearer \<YOUR-TOKEN\>"
+- Authorization: "Bearer <YOUR-TOKEN\>"
 Optional authorization using a Vaunt JWT to include private repositories.
 
 ## example
 
 ```bash
-curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/repositories/{repo_name}/contributorscontributors?format=svg&limit=10
+curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/repositoriesg&limit=10
 ```
 
 # Get Repository Contributors  v1/{provider}/entities/{name}/repositories/{repo_name}/contributors
@@ -141,5 +201,5 @@ Authorization required for private repositories.
 ## example
 
 ```bash
-curl  -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/repositories/{repo_name}/contributorscontributors?format=svg&limit=10
+curl  -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/repositories/{repo_name}/contributors?format=svg&limit=10
 ```

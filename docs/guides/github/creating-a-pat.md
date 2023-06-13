@@ -11,7 +11,7 @@ This can be done on Github by creating and using a fine-grained Personal Access 
 For the purposes of Vaunt Authorization a token for your own user does not need to have any additional permissions selected. It is only used to verify that you are
 the entity that you are requesting data for.
 
-If you want to create a token that can be used to validate you are an Admin of an organization to retrieve data for then you should create a Token for that organization and give the token Read-only access to the Members under the Organization permissions. 
+If you want to create a token that can be used to validate you are an Admin of an organization to retrieve data for then you should create a Token for that organization and give the token Read-only access to the Members under the Organization permissions.
 
 After generating a token you can use the token value with the `Authorization` header in requests to the Vaunt API, for Example:
 

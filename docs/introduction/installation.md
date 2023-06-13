@@ -11,7 +11,7 @@ Developer Cards are now available!! Check out our annoucement on our [blog](http
 
 ___
 
-Vaunt can currently be installation as a GitHub Application. We will be adding more installation targets as we begin supporting more platform with Vaunt. 
+Vaunt can currently be installation as a GitHub Application. We will be adding more installation targets as we begin supporting more platform with Vaunt.
 
 You can find our application [here](https://github.com/apps/vauntdev). We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
 
@@ -21,7 +21,7 @@ You can find our application [here](https://github.com/apps/vauntdev). We will a
 
 ## Authentication and Authorization
 
-Vaunt authenticates as a Github App. You can learn more about GitHub App authentication [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/about-authentication-with-a-github-app). 
+Vaunt authenticates as a Github App. You can learn more about GitHub App authentication [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/about-authentication-with-a-github-app).
 
 Below is an example screen for Authorizing Vaunt on your GitHub account and repositories.
 
@@ -31,7 +31,7 @@ Below is an example screen for Authorizing Vaunt on your GitHub account and repo
 
 :::tip
 
-We recommend installing Vaunt on all owned repositories. This ensures that your contributions are counted accurately. That said, by default all public contributions will be counted. 
+We recommend installing Vaunt on all owned repositories. This ensures that your contributions are counted accurately. That said, by default all public contributions will be counted.
 
 :::
 
@@ -41,7 +41,7 @@ We are committed to only leveraging the permissions we need in order for Vaunt t
 
 :::danger
 
-Vaunt can be uninstalled at any time by visting your app installation settings.
+Vaunt can be uninstalled at any time by visiting your app installation settings.
 
 On GitHub, This can be found under `Settings->Installations` for users and `Settings->GitHub Apps` for organizations.  
 

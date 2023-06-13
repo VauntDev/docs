@@ -13,7 +13,7 @@ ___
 
 Vaunt can currently be installation as a GitHub Application. We will be adding more installation targets as we begin supporting more platform with Vaunt. 
 
-You can find our application [here](https://github.com/apps/vauntdev). We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates. 
+You can find our application [here](https://github.com/apps/vauntdev). We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
 
 <p>
     <img src={require('./assets/install_vaunt.png').default}  width="500" height="200"/>
@@ -21,9 +21,9 @@ You can find our application [here](https://github.com/apps/vauntdev). We will a
 
 ## Authentication and Authorization
 
-Vaunt authenticates as a Github App. You can learn more about GitHub App autentication [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/about-authentication-with-a-github-app). 
+Vaunt authenticates as a Github App. You can learn more about GitHub App authentication [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/about-authentication-with-a-github-app). 
 
-Below is an example screen for Authorizing Vaunt on your GitHub account and repositories. 
+Below is an example screen for Authorizing Vaunt on your GitHub account and repositories.
 
 <p>
     <img src={require('./assets/install_vaunt_permissions.png').default} width="500" height="750"/>
@@ -35,13 +35,13 @@ We recommend installing Vaunt on all owned repositories. This ensures that your 
 
 :::
 
-We are commited to only leveraging the permissions we need in order for Vaunt to work. We will be continously evaluating the permissions requested to ensure we are using the least amount of permissions required. 
+We are committed to only leveraging the permissions we need in order for Vaunt to work. We will be continuously evaluating the permissions requested to ensure we are using the least amount of permissions required.
 
 ## Uninstall
 
 :::danger
 
-Vaunt can be uninstalled at any time by visting your app installation settings. 
+Vaunt can be uninstalled at any time by visting your app installation settings.
 
 On GitHub, This can be found under `Settings->Installations` for users and `Settings->GitHub Apps` for organizations.  
 

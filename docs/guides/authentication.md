@@ -13,8 +13,8 @@ Authentication works in two steps for the Vaunt APIs.
 First, you must prove that you are the user that has either owns the private repository on the given provider or you are
 and admin of the Organization that owns the repository.
 
-This can be done, for example, by using a Personal Access Token from Github.  See our [docs here](./github/github-profile) for
-and example of how to do this.
+This can be done, for example, by using a Personal Access Token from Github.  See our [docs here](./github/creating-a-pat) for
+an example of how to do this.
 
 Second, you can use the provider token to generate a Vaunt API Token that can be used to access the other API routes or to set
 a long-term public key that can used to verify signed Tokens generated outside of Vaunt.

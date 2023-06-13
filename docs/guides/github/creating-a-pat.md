@@ -4,27 +4,17 @@ title: Creating a PAT
 sidebar_position: 2
 ---
 
-GitHub provides users with the ability to customize their profile pages by creating a profile readme file. You can learn more about managing your GitHub readme here.
+A few of the Vaunt API routes require the user to provide authorization with a provider such as Github.
 
-In short, the readme file is a simple markdown file that can be used to describe yourself. GitHub has a wide range of support for markdown features and if you are new to markdown, you can find an introduction from GitHub [here](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
+This can be done on Github by creating and using a fine-grained Personal Access Token. See [Creating a fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) on Github for instructions on creating a token.
 
-We have taken advantage of this awesome Github feature by leveraging the basic HTML support provided to embed our Developer Cards.
+For the purposes of Vaunt Authorization a token for your own user does not need to have any additional permissions selected. It is only used to verify that you are
+the entity that you are requesting data for.
 
-Once you have created a user repository with a readme file, simply add the following lines and replace github_username with your username.
+If you want to create a token that can be used to validate you are an Admin of an organization to retrieve data for then you should create a Token for that organization and give the token Read-only access to the Members under the Organization permissions. 
 
+After generating a token you can use the token value with the `Authorization` header in requests to the Vaunt API, for Example:
 
-Optionally, you can include private repositories by passing `private=true` as a query parameter
-
-Here is an updated example **including** private contributions.
-
-```html
-<p>
-    <a href="https://vaunt.dev">
-        <img src="https://api.vaunt.dev/v1/github/entities/{{github_username}}/contributions?format=svg&private=true" width="350" title="Includes public and private contributions" />
-    </a>
-</p>
+```Bash
+curl -v -H "content-type: application/json"   -H "Authorization: Bearer <GITHUB_PAT>" http://api.vaunt.dev/v1/github/entities/<entity>/token
 ```
-
-That's it!
-
-You can find a complete readme example [here](https://github.com/jeff1010322/jeff1010322/blob/main/README.md).

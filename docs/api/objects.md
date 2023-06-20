@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::info
 
-Objects are returned from the API in Json format uses snake case.
+Objects are returned from the API in JSON format using snake case.
 
 :::
 
@@ -26,12 +26,14 @@ Objects are returned from the API in Json format uses snake case.
 | Error | Object, [ErrorResponse](#error-response) | Error response containing information about the cause, **omittable** |
 
 # Meta Data
+
 | field | type | description |
 |-------|------|-------------|
 | Count | int | number of records in the response data array |
 | DataType | int | [Object type](#data-types) of data from in the response data array |
 
 # Data Types
+
 Data types is a metadata value that describes the type of data found in the
 
 | value | type |
@@ -40,6 +42,7 @@ Data types is a metadata value that describes the type of data found in the
 | 1 | [EntityDetails](#entity-details) |
 
 # Entity Details
+
 | field | type | description |
 |-------|------|-------------|
 | Id | UUID, string | Vaunt UUID of the entity  |
@@ -54,10 +57,33 @@ Data types is a metadata value that describes the type of data found in the
 | CreatedDttm | date time | Date entity was added to Vaunt. |
 | UpdatedDttm | date time | Last updated time to an entity in Vaunt. |
 
-# Contributor Details
+# Repository Details
+
 | field | type | description |
 |-------|------|-------------|
-| Id | UUID, string | Vaunt UUID of the eContributorntity  |
+| Id | UUID, string | Vaunt UUID of the repository  |
+| Provider | string | VCS provider :: GitHub |
+| Owner | string | name of the repository owner |
+| Name | string | name of the repository |
+| URL | string | URL of the repository |
+| Deleted | boolean | whether this repo has been deleted |
+| Fork | boolean | whether this is a fork |
+| Forks | int64 | number of times this repo has been forked |
+| Private | boolean | whether this is a private repository |
+| Description | string | the description of the repository |
+| Language | string | primary language of the repository |
+| OpenIssues | int64 | number of open issues |
+| Stars | int64 | number of stars |
+| Size | int64 | size of the repository |
+| License | string | the name of the license used by the repository |
+| DefaultBranchName | string | the name of the default branch used by the repository |
+| CreatedDttm | date time | Date entity was added to Vaunt. |
+
+# Contributor Details
+
+| field | type | description |
+|-------|------|-------------|
+| Id | UUID, string | Vaunt UUID of the Contributor |
 | Provider | string | VCS provider :: GitHub |
 | Type |  string |  Contributor type :: organization, user, bot |
 | Name | string | name of the Contributor |
@@ -67,12 +93,11 @@ Data types is a metadata value that describes the type of data found in the
 | Contributions | int64,| number of contributions |
 | CreatedDttm | date time | Date Contributor was added to Vaunt. |
 
-
 # Contribution Summary
 
 | field | type | description |
 |-------|------|-------------|
-| Commits | uint64 | total commits
+| Commits | uint64 | total commits |
 | Issues | uint64 | total issues |
 | PullRequests | uint64 | total pull requests |
 | Reviews | uint64 | total reviews |
@@ -86,12 +111,30 @@ Data types is a metadata value that describes the type of data found in the
 
 | field | type | description |
 |-------|------|-------------|
-| Id | UUID, string  | id of the achievement
+| Id | UUID, string | id of the achievement |
 | RepositoryName | string | achievement Repository name |
 | Name | string | total pull requests |
 | IconUrl | string | url of achievement icon |
 | Description | string | description of the achievement |
 | AwardedDttm | date time | time the achievement was awarded |
+
+# Key
+
+| field | type | description |
+|-------|------|-------------|
+| Key | string | the public key for an entity used to validate JWT signatures |
+
+# Key ID
+
+| field | type | description |
+|-------|------|-------------|
+| Id | string | the id (Sha256 Hash) of the public key |
+
+# Token
+
+| field | type | description |
+|-------|------|-------------|
+| Token | string | the Vaunt token that can be used for authorization for a specific entity |
 
 # Error Response
 

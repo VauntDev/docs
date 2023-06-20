@@ -11,7 +11,7 @@ Developer Cards are now available!! Check out our annoucement on our [blog](http
 
 ___
 
-Vaunt can currently be installation as a GitHub Application. We will be adding more installation targets as we begin supporting more platform with Vaunt.
+Vaunt can currently be installed as a GitHub Application. We will be adding more installation targets as we begin supporting more platforms with Vaunt.
 
 You can find our application [here](https://github.com/apps/vauntdev). We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
 

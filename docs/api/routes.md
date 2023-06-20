@@ -196,7 +196,7 @@ Returns a [Contributors Details Object](./objects.md#contributor-details)
 
 ### Headers
 
-- Authorization: "Bearer \<YOUR-TOKEN\>"
+- Authorization: "Bearer <YOUR-TOKEN\>"
 Authorization required for private repositories.
 
 ### Example

@@ -131,6 +131,7 @@ Action defines the contribution action that this trigger uses.
 |-------|------|-------------|
 | additions | int | number of commit addition |
 | deletions | int | number of commit deletions |
+| extensions | string array | list of file extensions in commit |
 | changed_files | int | number of changed files |
 | created_at | date | the date the commit was created |
 
@@ -168,6 +169,17 @@ Action defines the contribution action that this trigger uses.
 The condition uses one or more of the fields from the action to create a conditional check for the achievement.
 The comparison should be appropriate for the type of the field such as equality for booleans or numeric comparison
 for integers, for example: `merged = true` or `comments > 10`.
+
+The string array fields `labels` and `extensions` use a special list comparison `in` with a list of strings to check against.
+There are several options for comparing the list based on way the list is provided. The short description is that `[]` means any,
+`![]` means not any, `{}` means all, and `!{}` means not all.
+
+The easiest way to understand is by looking at some examples.  The following conditions compare the labels of an issue:
+
+- `labels in ['bug', 'good first issue']` matches if the item has either of these labels
+- `labels in !['spam', 'duplicate']` matches if the item does NOT have any of these labels
+- `labels in {'bug', good first issue']` matches if the item has ALL of these labels
+- `labels in !{'bug', 'good first issue'}` matches if the item has does NOT have ALL of these labels (would still match on label "bug", but not on "bug" and "good first issue")
 
 Multiple conditions can be combined in a single trigger with the `&` and `|` operators.
 

@@ -143,7 +143,7 @@ Action defines the contribution action that this trigger uses.
 | comments | int | number of comments on the issue |
 | reactions | int | number of reactions on the issue |
 | labels | string array | list of labels assigned to the issue |
-| reason | string | the close state reason for an issue, can be either COMPLETED or NOT_PLANNED |
+| reason | string | the state reason for an issue, can be either REOPENED, COMPLETED, or NOT_PLANNED |
 | created_at | date | the date the issue was created |
 | closed_at | date | the date the issue was closed |
 

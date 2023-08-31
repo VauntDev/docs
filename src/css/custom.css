@@ -3,9 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
- @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
 
 /* You can override the default Infima variables here. */
 :root {
@@ -17,7 +15,7 @@
   --ifm-color-primary-lighter: #b1202b;
   --ifm-color-primary-lightest: #c82430;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Jost';
+  --ifm-font-family-base: 'Montserrat';
   
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }

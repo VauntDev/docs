@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Github Action"
 title: Github Action
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 GitHub Actions provide a way to automate and customize workflows within a GitHub repository. Refer to the [GitHub documentation](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) for more information about how to create and use your own actions. Here we will discuss how we created the Vaunt action and what it does as well as how you can add it to your own repositories.

@@ -11,7 +11,7 @@ by contributors.
 ## Example
 
 The VauntDev [Example](https://github.com/VauntDev/example) repository provides an [example config](https://github.com/VauntDev/example/blob/main/.vaunt/config.yaml)
-that can be placed in any repository that has Vaunt installed to enabled achievements.
+that can be placed in any repository that has Vaunt installed to enable achievements.
 
 The full yaml config looks like this:
 
@@ -21,7 +21,7 @@ achievements:
   - achievement:
       name: Shooting Star
       icon: https://raw.githubusercontent.com/vauntdev/example/main/.vaunt/shooting_star.png
-      description: Awarded for staring our repository, make a wish!
+      description: Awarded for starring our repository, make a wish!
       triggers:
         - trigger:
             actor: author
@@ -30,7 +30,7 @@ achievements:
   - achievement:
       name: Every Bit Counts
       icon: https://raw.githubusercontent.com/vauntdev/example/main/.vaunt/every_bit_counts.png
-      description: No commit is to small!
+      description: No commit is too small!
       triggers:
         - trigger:
             actor: author
@@ -81,7 +81,7 @@ There are several fields to a trigger that allow you to customize the exact requ
 
 #### Actor
 
-The Actor controls the subject of the condition. For most actions this will be the author.However, for pull_request specifically this can also be set to reviewers or assignees and for issues this may be set to resolved_by.
+The Actor controls the subject of the condition. For most actions this will be the author. However, for pull_request specifically this can also be set to reviewers or assignees and for issues this may be set to resolved_by.
 
 | Actor | Supported Actions |
 |-------|-------------------|

@@ -100,6 +100,8 @@ Action defines the contribution action that this trigger uses.
 | review | create actions related to reviewing pull requests |
 | commit | create actions related to authoring commits |
 | issue | create actions related to opening or resolving issues |
+| issue_comment | create actions related to authoring comments on issues |
+| pull_request_comment | create actions related to authoring comments on pull requests |
 | discussion | create actions related to opening or answering discussions |
 | star | create actions for starring the repository |
 
@@ -114,9 +116,10 @@ Action defines the contribution action that this trigger uses.
 | additions | int | number of commit additions made in the pull request |
 | deletions | int | number of commit deletions made in the pull request |
 | changed_files | int | number of changed files in the pull request |
-| files | string array | list of file paths in pr |
 | commits | int | number of commits made in the pull request |
 | labels | string array | list of labels assigned to the pull request |
+| emojis | string array | list of reaction emojis on the pull request body |
+| reactors | string array | list of users that have reacted to the pull request |
 | created_at | date | the date the pull request was created |
 | closed_at | date | the date the pull request was closed |
 
@@ -143,9 +146,29 @@ Action defines the contribution action that this trigger uses.
 | comments | int | number of comments on the issue |
 | reactions | int | number of reactions on the issue |
 | labels | string array | list of labels assigned to the issue |
+| emojis | string array | list of reaction emojis on the issue body |
+| reactors | string array | list of users that have reacted to the issue |
 | reason | string | the state reason for an issue, can be either REOPENED, COMPLETED, or NOT_PLANNED |
 | created_at | date | the date the issue was created |
 | closed_at | date | the date the issue was closed |
+
+#### Issue Comment Fields
+
+| field | type | description |
+|-------|------|-------------|
+| reactions | int | number of reactions on the issue |
+| emojis | string array | list of reaction emojis on the issue comment |
+| reactors | string array | list of users that have reacted to the comment |
+| created_at | date | the date the issue was created |
+
+#### Pull Request Comment Fields
+
+| field | type | description |
+|-------|------|-------------|
+| reactions | int | number of reactions on the issue |
+| emojis | string array | list of reaction emojis on the pull request comment |
+| reactors | string array | list of users that have reacted to the comment |
+| created_at | date | the date the issue was created |
 
 #### Discussion Fields
 

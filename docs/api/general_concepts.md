@@ -12,7 +12,9 @@ The following is an example `base64(uuid + / + createddttm)`.
 
 When making API requests, we support forward/backward operations. 
 
-The query parameter `after` returns data older than the supplied cursor, while the query parameter `before` returns data newer than the supplied cursor. 
+API endpoint requests yield a `next_cursor` denoting the last retrieved object and a `previous_cursor` denoting the first object.
+
+The query parameter `after` returns data after than the supplied cursor, while the query parameter `before` returns data before than the supplied cursor.
 
 # Limits
 

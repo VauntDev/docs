@@ -87,7 +87,7 @@ An achievement of type "ongoing" is one that can be earned at any time that a us
 for this achievement will be checked periodically and awards granted to users when they meet the contribution
 requirements.
 
-A achievment of type "once" is awarded only at a configured date and then is no longer earnable even if users
+An achievement of type "once" is awarded only at a configured date and then is no longer earnable even if users
 meet the conditions after the fact. The date for this field must be provided in the metadata.date field of the achievement.
 
 ### Achievement Metadata

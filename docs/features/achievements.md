@@ -74,6 +74,39 @@ The url to an icon image to use for the achievement.  This can be displayed when
 
 A description of the achievement that can be shown as hovertext when showcasing.
 
+### Achievement Type
+
+An optional field to specify the type of achievement. Achievements may be one of a number of types
+that use some additional information to determine how achievements should be awarded.
+
+The current supported types are:
+- **ongoing** (default)
+- **once**
+
+An achievement of type "ongoing" is one that can be earned at any time that a user qualifies for it. The conditions
+for this achievement will be checked periodically and awards granted to users when they meet the contribution
+requirements.
+
+A achievment of type "once" is awarded only at a configured date and then is no longer earnable even if users
+meet the conditions after the fact. The date for this field must be provided in the metadata.date field of the achievement.
+
+### Achievement Metadata
+
+Metadata is an optional field that provides some metadata about the achievement that may vary based on the achievement type.
+Currently, the only supported metadata field is "Date" which provides a date in month-day-year format on which to award an
+achievement of type "once".
+
+For example:
+
+```Yaml
+  - achievement:
+      type: once
+      metadata:
+          date: 01-19-2024
+```
+
+This achievement would be granted one time to qualified users on January 19th, 2024.
+
 ### Achievement Triggers
 
 Triggers are used to define the conditions that must be reached for a user to earn a given achievement.
@@ -104,6 +137,7 @@ Action defines the contribution action that this trigger uses.
 | pull_request_comment | create actions related to authoring comments on pull requests |
 | discussion | create actions related to opening or answering discussions |
 | star | create actions for starring the repository |
+| point | special action that uses point values from action definitions |
 
 #### Pull Request Fields
 
@@ -121,13 +155,16 @@ Action defines the contribution action that this trigger uses.
 | emojis | string array | list of reaction emojis on the pull request body |
 | reactors | string array | list of users that have reacted to the pull request |
 | created_at | date | the date the pull request was created |
+| merged_at | date | the date the pull request was merged |
 | closed_at | date | the date the pull request was closed |
+| actor | string array | list of users to include or exclude from this trigger |
 
 #### Review Fields
 
 | field | type | description |
 |-------|------|-------------|
 | created_at | date | the date the review was created |
+| actor | string array | list of users to include or exclude from this trigger |
 
 #### Commit Fields
 
@@ -137,6 +174,7 @@ Action defines the contribution action that this trigger uses.
 | deletions | int | number of commit deletions |
 | changed_files | int | number of changed files |
 | created_at | date | the date the commit was created |
+| actor | string array | list of users to include or exclude from this trigger |
 
 #### Issue Fields
 
@@ -151,6 +189,7 @@ Action defines the contribution action that this trigger uses.
 | reason | string | the state reason for an issue, can be either REOPENED, COMPLETED, or NOT_PLANNED |
 | created_at | date | the date the issue was created |
 | closed_at | date | the date the issue was closed |
+| actor | string array | list of users to include or exclude from this trigger |
 
 #### Issue Comment Fields
 
@@ -160,6 +199,7 @@ Action defines the contribution action that this trigger uses.
 | emojis | string array | list of reaction emojis on the issue comment |
 | reactors | string array | list of users that have reacted to the comment |
 | created_at | date | the date the issue was created |
+| actor | string array | list of users to include or exclude from this trigger |
 
 #### Pull Request Comment Fields
 
@@ -169,6 +209,7 @@ Action defines the contribution action that this trigger uses.
 | emojis | string array | list of reaction emojis on the pull request comment |
 | reactors | string array | list of users that have reacted to the comment |
 | created_at | date | the date the issue was created |
+| actor | string array | list of users to include or exclude from this trigger |
 
 #### Discussion Fields
 
@@ -180,6 +221,7 @@ Action defines the contribution action that this trigger uses.
 | reactions | int | number of reactions on the discussion |
 | created_at | date | the date the discussion was created |
 | closed_at | date | the date the discussion was closed |
+| actor | string array | list of users to include or exclude from this trigger |
 
 #### Star Fields
 
@@ -187,6 +229,14 @@ Action defines the contribution action that this trigger uses.
 |-------|------|-------------|
 | starred | bool | whether the repository was starred |
 | created_at | date | the date the star was given |
+| actor | string array | list of users to include or exclude from this trigger |
+
+### Point fields
+
+| field | type | description |
+|-------|------|-------------|
+| points | int | number of points the user has earned |
+| actor | string array | list of users to include or exclude from this trigger |
 
 ### Conditions
 
@@ -209,9 +259,58 @@ Multiple conditions can be combined in a single trigger with the `&` and `|` ope
 
 There are also a couple helpful functions that may be included.
 
-#### Functions
+## Actions
 
-- Count()
+In addition to standard achievements, the Vaunt config can be used to create custom actions that may be referenced by achievements.
+Actions have many of the same fields as achievements with a few minor differences.
+
+An action must specify the type field, which denotes the type of action being defined. Currently only `point` actions are supported,
+but we plan on adding additional types in the future.
+
+Also the trigger object for actions has an addtional `value` field which specifies a numeric value for the action, which for the `point`
+type is the number of points awarded for completing the action.
+
+Below is an example Vaunt config with actions and an achievement referencing the action:
+
+```Yaml
+version: 0.0.1
+actions:
+  - action:
+      type: point
+      name: commits
+      triggers:
+        - trigger:
+            actor: author
+            action: commit
+            condition: count(created_at >= 01-01-2023) >= 1
+            value: 4
+  - action:
+      type: point
+      name: prs
+      triggers:
+        - trigger:
+            actor: author
+            action: pull_request
+            condition: merged = true & created_at >= 01-01-2023
+            value: 10
+achievements:
+  - achievement:
+      name: Top Contributor 2023
+      icon: contributor.png
+      description: Awarded to the top contributor of 2023
+      type: once
+      metadata:
+        date: 01-01-2024
+      triggers:
+          - trigger:
+                actor: author
+                action: point
+                condition: rank(1) sum(commits, prs)
+```
+
+## Functions
+
+- count()
 
 Count can be used to return the number of times an action has occurred. For example, the commit action
 with a condition of `count() >= 10` would be fulfilled when a user has 10 or more commits in the repository.
@@ -220,7 +319,7 @@ You can additionally include conditionals inside the parenthesis of the count fu
 would be included in the count. For example, on a pull_request action the condition `count(merged = true) >= 10`
 would resolve for users that have created 10 or more pull requests that have been merged.
 
-- Age({interval})
+- age({interval})
 
 Age can be used to include the age of pull_request, issues, reviews, or discussions in the condition.
 Age is defined as the time from open to close of the given action.
@@ -229,3 +328,19 @@ The {interval} value must be one of either seconds, minutes, hours, or days.
 
 For example, the condition `age(days) < 10` on a pull_request action would resolve to pull_requests
 that were merged in less than 10 days.
+
+
+- sum({actions})
+
+Sum can be used to aggregate the values of one or more defined actions to award achievements for.
+Multiple actions can be provided as a comma delimited list. For example the condition `sum(commits, prs) > 10`
+would award an achievement to users that have earned at least 10 points accross the user defined commits and prs
+actions.
+
+
+- rank({num})
+
+Rank can be used with the point action to specify that an achievement is awarded specifically to the user at the
+provided rank. This can be used alongside the sum() function to order users by a given action.
+For example, `rank(1) & sum(my_action)` would award the achievement to the user that has the most number of points
+based on their contributions and the criteria of `my_action`.

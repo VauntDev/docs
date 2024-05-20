@@ -10,12 +10,7 @@ by contributors.
 
 ## Example
 
-The VauntDev [Example](https://github.com/VauntDev/example) repository provides an [example config](https://github.com/VauntDev/example/blob/main/.vaunt/config.yaml)
-that can be placed in any repository that has Vaunt installed to enable achievements.
-
-The only section that would need to be updated is the webhooks.
-You will need to change the repository to a repository in your installation if you want to setup webhooks for achievement notifications.
-Check out the [webhooks](webhooks.md) guide for information about setting up webhooks for your achievements.
+The VauntDev [Example](https://github.com/VauntDev/example) repository provides an example config that can be placed in any repository that has Vaunt installed to enable achievements.
 
 The standard yaml config looks like this:
 
@@ -61,6 +56,8 @@ achievements:
 ```
 
 This example uses a standard set of achievements that are free for any Vaunt users.
+
+Check out the [webhooks](webhooks.md) guide for information about setting up webhooks for your achievements.
 
 ## Vaunt Config Explanation
 

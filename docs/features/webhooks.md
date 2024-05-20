@@ -5,7 +5,7 @@ sidebar_position: 3
 ---
 
 Webhooks are an additional feature that can be enabled in the Vaunt config file to set up automated messages when events occur related to your Vaunt installation.
-For example, you can setup notifications to be issued when a contributor earns an Achievement.
+For example, you can set up notifications to be issued when a contributor earns an Achievement.
 
 ## Example
 
@@ -39,20 +39,20 @@ webhooks:
 
 ### Webhooks
 
-The root webhooks field contains a list of webhook objects, which each describe what events the webhook cares about, and what to do when the webhook event occurs.
+The root `webhooks` field contains a list of webhook objects, which each describe what events the webhook cares about, and what to do when the webhook event occurs.
 
 ### Webhook Object
 
-The webhook object contains 4 fields: name, type, metadata, and events
+The webhook object contains 4 fields: `name`, `type`, `metadata`, and `events`
 
 #### Webhook Name
 
-The name field is used for uniqueness. If you have more than one webhooks configured you should give them each a unique name.
+The `name` field is used for uniqueness. If you have more than one webhooks configured you should give them each a unique name.
 At this time, the name is not used anywhere except for your own organization.
 
 #### Webhook Type
 
-The type field is how you configure what the webhook should do.
+The `type` field is how you configure what the webhook should do.
 
 Types:
 - github - Send a notification to a github repository when the event occurs.
@@ -61,12 +61,12 @@ Right now the only supported type is `github`, but we plan on adding additional 
 
 #### Webhook Metadata
 
-The metadata field stores an object that will vary depending on the type of webhook configured.
+The `metadata` field stores an object that will vary depending on the type of webhook configured.
 The various metadata objects will be defined below for each supported type.
 
 #### GitHub Metadata
 
-The github metadata objects defines where webhook events are sent for the `github` webhook type.
+The GitHub metadata objects defines where webhook events are sent for the `github` webhook type.
 Vaunt supports a discussion target that will be used to post comments when a webhook event occurs.
 
 Example discussion object fields are explained below.
@@ -80,9 +80,9 @@ and that the repository has discussions enabled and a discussion with the listed
 
 #### Webhook Events
 
-The events field contains a list of events that will trigger the webhook.
-Each event object in the list contains two fields: a type and a value.
-The value describes how to match on the type of the event.
+The `events` field contains a list of events that will trigger the webhook.
+Each event object in the list contains two fields: a `type` and a `value`.
+The `value` field describes how to match on the type of the event.
 
 The possible types and their associated values are described below:
 

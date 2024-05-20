@@ -10,16 +10,14 @@ by contributors.
 
 ## Example
 
-The VauntDev [Example](https://github.com/VauntDev/example) repository provides an example config that can be placed in any repository that has Vaunt installed to enable achievements.
-
-The standard yaml config looks like this:
+This example shows some of the standard achievement definitions. You can place this file in your repository under `./vaunt/config.yaml` with updated image urls for the icons to enable Achievements for you repository.
 
 ```Yaml
 version: 0.0.1
 achievements:
   - achievement:
       name: Shooting Star
-      icon: https://raw.githubusercontent.com/vauntdev/example/main/.vaunt/shooting_star.png
+      icon: <image_url>
       description: Awarded for starring our repository, make a wish!
       triggers:
         - trigger:
@@ -28,7 +26,7 @@ achievements:
             condition: starred = true
   - achievement:
       name: Every Bit Counts
-      icon: https://raw.githubusercontent.com/vauntdev/example/main/.vaunt/every_bit_counts.png
+      icon: <image_url>
       description: No commit is too small!
       triggers:
         - trigger:
@@ -37,7 +35,7 @@ achievements:
             condition: count() >= 1
   - achievement:
       name: Pull Request Hero
-      icon: https://raw.githubusercontent.com/vauntdev/example/main/.vaunt/pull_request_hero.png
+      icon: <image_url>
       description: You're a PR hero, rock on!
       triggers:
         - trigger:
@@ -46,7 +44,7 @@ achievements:
             condition: merged = true
   - achievement:
       name: Closer
-      icon: https://raw.githubusercontent.com/vauntdev/example/main/.vaunt/closer.png
+      icon: <image_url>
       description: Only closers get coffee!
       triggers:
         - trigger:

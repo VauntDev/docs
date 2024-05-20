@@ -54,9 +54,32 @@ achievements:
             actor: author
             action: issue
             condition: closed = true
+webhooks:
+  - webhook:
+      name: achievements
+      type: github
+      metadata:
+        discussion:
+          repository: VauntDev/example
+          title: Vaunt Achievements
+      events:
+        - event:
+            type: achievement
+            value: Shooting Star
+        - event:
+            type: achievement
+            value: Every Bit Counts
+        - event:
+            type: achievement
+            value: Pull Request Hero
+        - event:
+            type: achievement
+            value: Closer
 ```
 
 This example uses a standard set of achievements that are free for any Vaunt users.
+
+Check out the [webhooks](webhooks.md) guide for information about the webhooks section.
 
 ## Vaunt Config Explanation
 

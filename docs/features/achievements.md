@@ -13,7 +13,11 @@ by contributors.
 The VauntDev [Example](https://github.com/VauntDev/example) repository provides an [example config](https://github.com/VauntDev/example/blob/main/.vaunt/config.yaml)
 that can be placed in any repository that has Vaunt installed to enable achievements.
 
-The full yaml config looks like this:
+The only section that would need to be updated is the webhooks.
+You will need to change the repository to a repository in your installation if you want to setup webhooks for achievement notifications.
+Check out the [webhooks](webhooks.md) guide for information about setting up webhooks for your achievements.
+
+The standard yaml config looks like this:
 
 ```Yaml
 version: 0.0.1
@@ -54,32 +58,9 @@ achievements:
             actor: author
             action: issue
             condition: closed = true
-webhooks:
-  - webhook:
-      name: achievements
-      type: github
-      metadata:
-        discussion:
-          repository: VauntDev/example
-          title: Vaunt Achievements
-      events:
-        - event:
-            type: achievement
-            value: Shooting Star
-        - event:
-            type: achievement
-            value: Every Bit Counts
-        - event:
-            type: achievement
-            value: Pull Request Hero
-        - event:
-            type: achievement
-            value: Closer
 ```
 
 This example uses a standard set of achievements that are free for any Vaunt users.
-
-Check out the [webhooks](webhooks.md) guide for information about the webhooks section.
 
 ## Vaunt Config Explanation
 

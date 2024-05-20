@@ -7,7 +7,6 @@ sidebar_position: 3
 Webhooks are an additional feature that can be enabled in the Vaunt config file to set up automated messages when events occur related to your Vaunt installation.
 For example, you can setup notifications to be issued when a contributor earns an Achievement.
 
-
 ## Example
 
 Below is the webhooks section of the VauntDev [Example](https://github.com/VauntDev/example) repository, which is configured to enable notifications for all achievements earned:
@@ -75,6 +74,9 @@ Example discussion object fields are explained below.
 - discussion
     - repository - The repository owner/name to post the discussion comment on webhook events.
     - title - The repository discussion title in which to post the discussion comment
+
+To enable discussion comment posting for notifications, you must make sure the repository listed is one that is withing your Vaunt installation
+and that the repository has discussions enabled and a discussion with the listed title created.
 
 #### Webhook Events
 

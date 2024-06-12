@@ -13,7 +13,7 @@ ___
 
 Vaunt can currently be installed as a GitHub Application. We will be adding more installation targets as we begin supporting more platforms with Vaunt.
 
-You can find our application [here](https://github.com/apps/vauntdev). We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
+You can find our application [here](https://github.com/marketplace/vaunt-dev). We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
 
 <p>
     <img src={require('./assets/install_vaunt.png').default}  width="500" height="200"/>

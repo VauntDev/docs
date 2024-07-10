@@ -10,7 +10,7 @@ by contributors.
 
 ## Example
 
-This example shows some of the standard achievement definitions. You can place this file in your repository under `./vaunt/config.yaml` with updated image urls for the icons to enable Achievements for you repository.
+This example shows some of the standard achievement definitions. You can place this file in your repository under `./.vaunt/config.yaml` with updated image urls for the icons to enable Achievements for you repository.
 
 ```Yaml
 version: 0.0.1

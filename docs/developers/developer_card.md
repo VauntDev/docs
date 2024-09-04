@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Developer Card"
 title: Developer Card
-sidebar_position: 1
+sidebar_position: 2
 ---
 Developers Cards are a new way for developers to showcase their experience and contributions to repositories. The primary goal of developer cards is to provide more visibility into how a developer is engaging with various public or private projects.
 

@@ -38,6 +38,6 @@ Here is an updated example **including** private contributions.
 </p>
 ```
 
-That's it!
+You can also feel free to adjust the width of the SVG cards.
 
 You can find a complete readme example [here](https://github.com/simonmazzaroth/simonmazzaroth/blob/main/README.md).

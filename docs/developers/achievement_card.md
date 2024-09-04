@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Achievement Card"
 title: Achievement Card
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 Simply add the following lines and replace {{github_username}} with your username.

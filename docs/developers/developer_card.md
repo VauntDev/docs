@@ -10,6 +10,12 @@ In short, the readme file is a simple markdown file that can be used to describe
 
 We have taken advantage of this awesome Github feature by leveraging the basic HTML support provided to embed our Developer Cards.
 
+</p>    
+<a href="https://community.vaunt.dev/board/simonmazzaroth">
+        <img src="https://api.vaunt.dev/v1/github/entities/simonmazzaroth/contributions?format=svg" width="300" title="Includes public contributions"/>
+    </a>
+</p>
+
 Once you have created a user repository with a readme file, simply add the following lines and replace {{github_username}} with your username.
 
 ```html
@@ -34,4 +40,4 @@ Here is an updated example **including** private contributions.
 
 That's it!
 
-You can find a complete readme example [here](https://github.com/jeff1010322/jeff1010322/blob/main/README.md).
+You can find a complete readme example [here](https://github.com/simonmazzaroth/simonmazzaroth/blob/main/README.md).

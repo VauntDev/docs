@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Authentication"
 title: Authentication
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 If you choose to install Vaunt on one or more private repositories then you will need to use Authentication to retrieve the data

@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Creating a PAT"
 title: Creating a PAT
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 A few of the Vaunt API routes require the user to provide authorization with a provider such as Github. We refer to this authorization as attestation as we are

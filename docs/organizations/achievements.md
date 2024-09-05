@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Achievements"
 title: Achievements
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 Achievements are a way for developers or organizations to incentivize other developers to make contributions to their repositories. By using a Vaunt achievements config

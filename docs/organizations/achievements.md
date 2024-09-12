@@ -63,15 +63,27 @@ The Achievements defined in the Vaunt config have several attributes that will b
 
 ### Achievement Name
 
-The name of the achievement.
+The name of the achievement. The name will be displayed on achievement card, Vaunt open source community. We recommend a maximum of 20 characters.
+
+We use the name for the primary identifier. 
+- If you change the name, it is a new achievement. The old achievement is active.
+- If you want to stop giving out the old achievement, please contact us for support.
+- If you change trigger, such as icon, description, and trigger, it is still a same achievement.
+- If you remove the achievements from the yaml file, users will still have the achievements they earned.
 
 ### Achievement Icon
 
-The url to an icon image to use for the achievement.  This can be displayed when showcasing achievements.
+The url to an icon image to use for the achievement.  This can be displayed when showcasing achievements. We recommend the following:
+- (Required) Aspect ratio: 1:1
+- (Required) Format: PNG or JPEG
+- (Suggested) Image size: 500 x 500 px 
+- (Suggested) Sharp: Round
+- (Suggested) File Size: Under 1 MB
+
 
 ### Achievement Description
 
-A description of the achievement that can be shown as hovertext when showcasing.
+A description of the achievement that can be shown as hovertext when showcasing. The discription will be only displayed on Vaunt open source community. We recommend a maximum of 100 characters.
 
 ### Achievement Type
 
@@ -254,7 +266,8 @@ The easiest way to understand is by looking at some examples.  The following con
 - `labels in {'bug', good first issue']` matches if the item has ALL of these labels
 - `labels in !{'bug', 'good first issue'}` matches if the item has does NOT have ALL of these labels (would still match on label "bug", but not on "bug" and "good first issue")
 
-Multiple conditions can be combined in a single trigger with the `&` and `|` operators.
+Multiple conditions can be combined in a single trigger with the `&` and `|` operators. `AND` doesn’t work.
+
 
 There are also a couple helpful functions that may be included.
 
@@ -312,11 +325,12 @@ achievements:
 - count()
 
 Count can be used to return the number of times an action has occurred. For example, the commit action
-with a condition of `count() >= 10` would be fulfilled when a user has 10 or more commits in the repository.
+with a condition of `count() >= 10` would be fulfilled when a user has 10 or more commits in the repository. Since we are not able to do everything in real-time, it will be safer to use  `>=`  to make sure contributors get the achievement
+
 
 You can additionally include conditionals inside the parenthesis of the count function to restrict which actions
 would be included in the count. For example, on a pull_request action the condition `count(merged = true) >= 10`
-would resolve for users that have created 10 or more pull requests that have been merged.
+would resolve for users that have created 10 or more pull requests that have been merged. 
 
 - age({interval})
 

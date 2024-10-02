@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 Developers Cards are a new way for developers to showcase their experience and contributions to repositories. The primary goal of developer cards is to provide more visibility into how a developer is engaging with various public or private projects.
 
-</p>    
+<p>    
 <a href="https://community.vaunt.dev/board/simonmazzaroth">
         <img src="https://api.vaunt.dev/v1/github/entities/simonmazzaroth/contributions?format=svg" width="300" title="Includes public contributions"/>
     </a>

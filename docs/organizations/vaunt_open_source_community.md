@@ -9,7 +9,7 @@ Vaunt Community Boards provide community statistics, repository insights, and a 
 Below is an example of a repository board.
 
 <p>
-    <img src={require('./assets/cb vaunt.png').default}  width="500" height="200"/>
+    <img src={require('./assets/community_board.png').default}  width="500" height="200"/>
 </p>
 
 
@@ -43,5 +43,5 @@ Below is an example of a repository board.
 
 
 <p>
-    <img src={require('./assets/Community Board.png').default}  width="150" height="50"/>
+    <img src={require('./assets/community_badge.png').default}  width="150" height="50"/>
 </p>

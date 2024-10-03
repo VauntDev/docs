@@ -8,17 +8,17 @@ GitHub Actions provide a way to automate and customize workflows within a GitHub
 
 The Vaunt action is published on the GitHub Marketplace [here](https://github.com/marketplace/actions/vaunt-cards-action) and you may find the action source code in the repository [here](https://github.com/VauntDev/vaunt-cards-action). Once you have added the workflow you will also need to make sure that your repository gives Workflows Read and Write permissions as it uses this to check-in the contributors file. To do this in your repository go to settings->Actions->General and scroll down to the Workflow permissions section:
 
-<!-- <p>
-    <img src={require('./assets/workflow_permissions.png').default} width="500" height="500"/>
-</p> -->
+<p>
+    <img src={require('../assets/workflow_permissions.png').default} width="500" height="500"/>
+</p>
 
 The last thing to know, if you are installing this on a private repository you will need to generate a GitHub Personal Access Token and provide it as a secret to the Action as input. The authentication process is described in more detail in another blog, but for the purposes of this action you just need to know that you will use a GitHub token for input to validate that you are the owner or admin of the repository.
 
 Once you have created a token as described here you can add the token as a repository secret to be provided as a parameter in the workflow. You can do this by going to settings in your repository and selecting Secrets and variables->actions:
 
-<!-- <p>
-    <img src={require('./assets/actions_secrets.png').default} width="500" height="500"/>
-</p> -->
+<p>
+    <img src={require('../assets/actions_secrets.png').default} width="500" height="500"/>
+</p>
 
 Click the button that says New repository secret, give it a name that you will use in the workflow such as “PAT” for Personal Access Token, and paste the token string as the secret. Then in your workflow file, make sure that you have the token provided as input using the with field like this:
 

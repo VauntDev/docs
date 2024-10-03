@@ -16,17 +16,17 @@ that your user id in Github matches the entity.
 
 See an example of the permissions for a user token below.
 
-<!-- <p>
-    <img src={require('./assets/user_pat.png').default} width="500" height="750"/>
-</p> -->
+<p>
+    <img src={require('../assets/user_pat.png').default} width="500" height="750"/>
+</p>
 
 If you want to create a token that can be used to validate you are an Admin of an organization to retrieve data for then you should create a token for that organization and give the token Read-only access to the Members under the organization permissions. Read access to members is used to confirm with Github that you are an Admin of the organization. Currently, an admin of the organization must be the one to create the token for attestation.
 
 See an example of the permissions for an organization token below.
 
-<!-- <p>
-    <img src={require('./assets/organization_permissions.png').default} width="500" height="750"/>
-</p> -->
+<p>
+    <img src={require('../assets/organization_permissions.png').default} width="500" height="750"/>
+</p>
 
 After generating a token you can use the token value with the `Authorization` header in requests to the Vaunt API, for Example:
 

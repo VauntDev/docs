@@ -33,7 +33,6 @@ After creating the achievement badges, you have create a GitHub repository to ma
 - Add a description of the achievement and share that with Vaunt.
     - No more than 100 characters **(Suggested)**
 - Gather participants' GitHub Username, Name and Email.
-- Share a list of winners in an Excel file with Vaunt.
 
 #### Example
 | GitHub Username | Award Name | Name | Email |

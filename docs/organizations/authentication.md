@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Authentication"
 title: Authentication
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 If you choose to install Vaunt on one or more private repositories then you will need to use Authentication to retrieve the data
@@ -13,7 +13,7 @@ Authentication works in two steps for the Vaunt APIs.
 First, you must prove that you are the user that has either owns the private repository on the given provider or you are
 and admin of the Organization that owns the repository.
 
-This can be done, for example, by using a Personal Access Token from Github. See our [docs here](./github/creating-a-pat) for
+This can be done, for example, by using a Personal Access Token from Github. See our [docs here](./private_repository/creating-a-pat) for
 an example of how to do this.
 
 Second, you can use the provider token to generate a Vaunt API Token that can be used to access the other API routes or to set

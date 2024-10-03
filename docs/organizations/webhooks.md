@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Webhooks"
 title: Webhooks
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 Webhooks are an additional feature that can be enabled in the Vaunt config file to set up automated messages when events occur related to your Vaunt installation.

@@ -1,5 +1,5 @@
 ---
-sidebar_label: "developer"
+sidebar_label: "Github Profile"
 title: Github Profile
 sidebar_position: 1
 ---

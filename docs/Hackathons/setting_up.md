@@ -20,7 +20,7 @@ Vaunt can be used in hackathons to provide digital badges to the participants. Y
 - Sharp: Round **(Suggested)**
 - File Size: Under 1 MB **(Suggested)**
 
-You can take a look at this **[Repository](https://github.com/ojasaklechayt/defy24-online-badges/tree/main/images)** for better understanding of the custom achievement creation and the **[achievement configurations.](https://docs.vaunt.dev/features/achievements)**
+You can take a look at this **[Repository](https://github.com/ojasaklechayt/defy24-online-badges/tree/main/images)** for better understanding of the custom achievement creation and the **[achievement configurations.](../developers/achievement_card)**
 
 ## Configuring The GitHub Repository
 

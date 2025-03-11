@@ -24,7 +24,7 @@ a long-term public key that can used to verify signed Tokens generated outside o
 For an example, on how Authentication may work for a Github user accessing private repositories first you would generate fine-grained
 access token as the Github user.
 
-Then you could make the following API request to Vaunt, replacing <entity\> with the user and <GITHUB_PAT\> with the token:
+Then you could make the following API request to Vaunt, replacing \<entity\> with the user and \<GITHUB_PAT\> with the token:
 
 ```Bash
 curl -v -H "content-type: application/json" -H "Authorization: Bearer <GITHUB_PAT>" http://api.vaunt.dev/v1/github/entities/<entity>/token
@@ -36,7 +36,7 @@ If successful, the response should look like this:
 {"meta_data":{"count":1,"data_type":4},"data":{"token":"<VAUNT_JWT>"}}
 ```
 
-You can now use the <VAUNT_JWT> in other API requests which will authorize you to retrieve private repository data for only the given entity.
+You can now use the \<VAUNT_JWT\> in other API requests which will authorize you to retrieve private repository data for only the given entity.
 
 For example, you can retrieve private repos for the entity with this API request:
 

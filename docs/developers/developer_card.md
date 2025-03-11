@@ -30,12 +30,12 @@ These cards contain the following information
 
 We have taken advantage of this awesome Github feature by leveraging the basic HTML support provided to embed our Developer Cards.
 
-Once you have created a user repository with a readme file, simply add the following lines and replace {{github_username}} with your username.
+Once you have created a user repository with a readme file, simply add the following lines and replace \{github_username\} with your username.
 
 ```html
 <p>
     <a href="https://vaunt.dev">
-        <img src="https://api.vaunt.dev/v1/github/entities/{{github_username}}/contributions?format=svg" width="350" title="Includes public contributions"/>
+        <img src="https://api.vaunt.dev/v1/github/entities/{github_username}/contributions?format=svg" width="350" title="Includes public contributions"/>
     </a>
 </p>
 ```
@@ -47,7 +47,7 @@ Here is an updated example **including** private contributions.
 ```html
 <p>
     <a href="https://vaunt.dev">
-        <img src="https://api.vaunt.dev/v1/github/entities/{{github_username}}/contributions?format=svg&private=true" width="350" title="Includes public and private contributions" />
+        <img src="https://api.vaunt.dev/v1/github/entities/{github_username}/contributions?format=svg&private=true" width="350" title="Includes public and private contributions" />
     </a>
 </p>
 ```

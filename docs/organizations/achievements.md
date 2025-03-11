@@ -332,26 +332,26 @@ You can additionally include conditionals inside the parenthesis of the count fu
 would be included in the count. For example, on a pull_request action the condition `count(merged = true) >= 10`
 would resolve for users that have created 10 or more pull requests that have been merged. 
 
-- age({interval})
+- age(\{interval\})
 
 Age can be used to include the age of pull_request, issues, reviews, or discussions in the condition.
 Age is defined as the time from open to close of the given action.
 
-The {interval} value must be one of either seconds, minutes, hours, or days.
+The \{interval\} value must be one of either seconds, minutes, hours, or days.
 
 For example, the condition `age(days) < 10` on a pull_request action would resolve to pull_requests
 that were merged in less than 10 days.
 
 
-- sum({actions})
+- sum(\{actions\})
 
 Sum can be used to aggregate the values of one or more defined actions to award achievements for.
 Multiple actions can be provided as a comma delimited list. For example the condition `sum(commits, prs) > 10`
-would award an achievement to users that have earned at least 10 points accross the user defined commits and prs
+would award an achievement to users that have earned at least 10 points across the user defined commits and prs
 actions.
 
 
-- rank({num})
+- rank(\{num\})
 
 Rank can be used with the point action to specify that an achievement is awarded specifically to the user at the
 provided rank. This can be used alongside the sum() function to order users by a given action.

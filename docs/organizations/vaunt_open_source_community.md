@@ -17,11 +17,11 @@ Below is an example of a repository board.
 
 - Install [Vaunt](https://github.com/marketplace/vaunt-dev) from GitHub Marketplace.
 - Make sure you have granted permission to the repository where you want to utilize Vaunt.
-- Add this code to your readme file and replace **{{github_organization_username}}** with your **organization username**.
+- Add this code to your readme file and replace **\{github_organization_username\}** with your **organization username**.
 
 ```html
 
-    [![Vaunt Community](https://api.vaunt.dev/v1/github/entities/{{github_organization_username}}/badges/community)](https://community.vaunt.dev/board/{{github_organization_username}})
+    [![Vaunt Community](https://api.vaunt.dev/v1/github/entities/{github_organization_username}/badges/community)](https://community.vaunt.dev/board/{github_organization_username})
 
 ```
 
@@ -30,11 +30,11 @@ Below is an example of a repository board.
 
 - Install [Vaunt](https://github.com/marketplace/vaunt-dev) from GitHub Marketplace.
 - Make sure you have granted permission to the repository where you want to utilize Vaunt.
-- Add this code to your readme file and replace **{{github_organization_username}}** with your **organization name** and **{{github_repository_name }}** with your **repository name**. 
+- Add this code to your readme file and replace **\{github_organization_username\}** with your **organization name** and **\{github_repository_name \}** with your **repository name**. 
 
 ```html
 
-[![Vaunt Community](https://api.vaunt.dev/v1/github/entities/{{github_organization_username }}/repositories/{{github_repository_name}}/badges/community)](https://community.vaunt.dev/board/{{github_organization_username }}/repository/{{github_repository_name}})
+[![Vaunt Community](https://api.vaunt.dev/v1/github/entities/{github_organization_username}/repositories/{github_repository_name}/badges/community)](https://community.vaunt.dev/board/{github_organization_username}/repository/{github_repository_name})
 
 ```
 <br></br>

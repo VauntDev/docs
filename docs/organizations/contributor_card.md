@@ -9,12 +9,12 @@ sidebar_position: 3
 
 ## Organization Level 
 
-Add the following code to the .github repository’s profile/README.md to display on the organization README, or anywhere else you would like it displayed. Also, replace {{org_aname}} with your organization name
+Add the following code to the .github repository’s profile/README.md to display on the organization README, or anywhere else you would like it displayed. Also, replace \{org_name\} with your organization name
 
 ```html
 <p>
-<a href="https://community.vaunt.dev/board/{{org_name}}">
-  <img src="https://api.vaunt.dev/v1/github/entities/{{org_name}}/contributors?limit=15&format=svg" width="350" />
+<a href="https://community.vaunt.dev/board/{org_name}">
+  <img src="https://api.vaunt.dev/v1/github/entities/{org_name}/contributors?limit=15&format=svg" width="350" />
 </p>
 ```
 
@@ -22,12 +22,12 @@ NOTE: By changing the limit, you can display more than 15 contributors by changi
 
 ## Repository level
 
-Add the following code to the repository README, or anywhere else you would like it displayed. Also, replace {{org_aname}} with your organization name and {{repo_name}} with your repository name 
+Add the following code to the repository README, or anywhere else you would like it displayed. Also, replace \{org_name\} with your organization name and \{repo_name\} with your repository name 
 
 ```html
 <p>
-<a href="https://community.vaunt.dev/board/{{org_name}}/repository/{{repo_name}}">
-  <img src="https://api.vaunt.dev/v1/github/entities/{{org_name}}}/repositories/{{repo_name}}/contributors?format=svg&limit=15" width="350" />
+<a href="https://community.vaunt.dev/board/{org_name}/repository/{repo_name}">
+  <img src="https://api.vaunt.dev/v1/github/entities/{org_name}/repositories/{repo_name}/contributors?format=svg&limit=15" width="350" />
 </p>
 ```
 

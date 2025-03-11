@@ -4,19 +4,21 @@ title: objects
 sidebar_position: 2
 ---
 
+# Objects
+
 :::info
 
 Objects are returned from the API in JSON format using snake case.
 
 :::
 
-# Providers
+## Providers
 
 | field | type | description |
 |-------|------|-------------|
 | github | string | GitHub vcs provider |
 
-# Response
+## Response
 
 | field | type | description |
 |-------|------|-------------|
@@ -25,14 +27,14 @@ Objects are returned from the API in JSON format using snake case.
 | Cursor | string | cursor used for [Pagination](./general_concepts.md#pagination), **omittable** |
 | Error | Object, [ErrorResponse](#error-response) | Error response containing information about the cause, **omittable** |
 
-# Meta Data
+## Meta Data
 
 | field | type | description |
 |-------|------|-------------|
 | Count | int | number of records in the response data array |
 | DataType | int | [Object type](#data-types) of data from in the response data array |
 
-# Data Types
+## Data Types
 
 Data types is a metadata value that describes the type of data found in the
 
@@ -41,7 +43,7 @@ Data types is a metadata value that describes the type of data found in the
 | 0 | Unknown |
 | 1 | [EntityDetails](#entity-details) |
 
-# Entity Details
+## Entity Details
 
 | field | type | description |
 |-------|------|-------------|
@@ -57,7 +59,7 @@ Data types is a metadata value that describes the type of data found in the
 | CreatedDttm | date time | Date entity was added to Vaunt. |
 | UpdatedDttm | date time | Last updated time to an entity in Vaunt. |
 
-# Repository Details
+## Repository Details
 
 | field | type | description |
 |-------|------|-------------|
@@ -79,7 +81,7 @@ Data types is a metadata value that describes the type of data found in the
 | DefaultBranchName | string | the name of the default branch used by the repository |
 | CreatedDttm | date time | Date entity was added to Vaunt. |
 
-# Contributor Details
+## Contributor Details
 
 | field | type | description |
 |-------|------|-------------|
@@ -93,7 +95,7 @@ Data types is a metadata value that describes the type of data found in the
 | Contributions | int64,| number of contributions |
 | CreatedDttm | date time | Date Contributor was added to Vaunt. |
 
-# Contribution Summary
+## Contribution Summary
 
 | field | type | description |
 |-------|------|-------------|
@@ -107,7 +109,7 @@ Data types is a metadata value that describes the type of data found in the
 | PullRequestsMerged | uint64 | total pull requests merged |
 | DiscussionsAnswered | uint64 | total answered discussions |
 
-# Achievement Awarded Details
+## Achievement Awarded Details
 
 | field | type | description |
 |-------|------|-------------|
@@ -118,32 +120,32 @@ Data types is a metadata value that describes the type of data found in the
 | Description | string | description of the achievement |
 | AwardedDttm | date time | time the achievement was awarded |
 
-# Key
+## Key
 
 | field | type | description |
 |-------|------|-------------|
 | Key | string | the public key for an entity used to validate JWT signatures |
 
-# Key ID
+## Key ID
 
 | field | type | description |
 |-------|------|-------------|
 | Id | string | the id (Sha256 Hash) of the public key |
 
-# Token
+## Token
 
 | field | type | description |
 |-------|------|-------------|
 | Token | string | the Vaunt token that can be used for authorization for a specific entity |
 
-# Error Response
+## Error Response
 
 | field | type | description |
 |-------|------|-------------|
 | Message | string | Human readable error message |
 | Code | int32,[ErrorCode](#error-codes) | internal error code |
 
-# Error Codes
+## Error Codes
 
 | value | type |
 |-------|------|

@@ -48,7 +48,7 @@ Returns a [Entity Details Object](./objects.md#entity-details)
 curl https://api.vaunt.dev/v1/{provider}/entities/{name}/contributions?format=svg,private=true
 ```
 
-## Get Entity Contributors  v1/\{provider\}/entities/{name}/contributors
+## Get Entity Contributors  v1/\{provider\}/entities/\{name\}/contributors
 
 Returns a [Contributors Details Object](./objects.md#contributor-details)
 
@@ -70,7 +70,7 @@ Returns a [Contributors Details Object](./objects.md#contributor-details)
 curl https://api.vaunt.dev/v1/{provider}/entities/{name}/contributors?format=svg&limit=10
 ```
 
-## Get Entity achievements  v1/\{provider\}/entities/{name}/achievements
+## Get Entity achievements  v1/\{provider\}/entities/\{name\}/achievements
 
 Returns a [Achievement Awarded Object](./objects.md#achievement-awarded-details)
 
@@ -92,7 +92,7 @@ Returns a [Achievement Awarded Object](./objects.md#achievement-awarded-details)
 curl https://api.vaunt.dev/v1/{provider}/entities/{name}/achievements?format=svg&limit=10
 ```
 
-## Get Entity Keys v1/\{provider\}/entities/{name}/keys
+## Get Entity Keys v1/\{provider\}/entities/\{name\}/keys
 
 Returns a [Key Object](./objects.md#key)
 
@@ -112,7 +112,7 @@ Required authorization using a Vaunt JWT.
 curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/keys
 ```
 
-## Put Entity Keys v1/\{provider\}/entities/{name}/keys
+## Put Entity Keys v1/\{provider\}/entities/\{name\}/keys
 
 Sets a [Key Object](./objects.md#key) and returns the [Key Id](./objects.md#key-id)
 

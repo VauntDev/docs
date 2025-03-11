@@ -5,6 +5,8 @@ slug: /
 title: Overview
 ---
 
+# Overview
+
 Vaunt is a developer relations platform that is designed to help developers connect, collaborate, and share experiences with each other.  
 
 Vaunt is designed for two primary audiences:

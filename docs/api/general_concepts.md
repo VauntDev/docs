@@ -4,7 +4,9 @@ title: "General Concepts"
 sidebar_position: 1
 ---
 
-# Pagination 
+# General Concepts
+
+## Pagination 
 
 Vaunt uses UUIDs when storing objects. For pagination, we use a composite `UUID` and `CreatedDTTM` to create a base64 encoded `Cursor`.
 
@@ -16,10 +18,10 @@ API endpoint requests yield a `next_cursor` denoting the last retrieved object a
 
 The query parameter `after` returns data after than the supplied cursor, while the query parameter `before` returns data before than the supplied cursor.
 
-# Limits
+## Limits
 
 All API routes enforce a `max` limit of 100 records. 
 
-# Caching 
+## Caching 
 
 Caching is currently handled internally, we will be working on exposing cache control methods for API routes in the future. 

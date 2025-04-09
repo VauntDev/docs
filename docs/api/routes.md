@@ -6,7 +6,7 @@ title: Routes
 
 ## Get Entity v1/\{provider\}/entities/\{name\}
 
-Returns a [Entity Details Object](./objects.md#entity-details)
+Returns a **[Entity Details Object](./objects.md#entity-details)**
 
 ### Required Url Parameters
 
@@ -27,7 +27,7 @@ curl api.vaunt.dev/v1/{provider}/entities/{name}
 
 ## Get Entity Contributions  v1/\{provider\}/entities/\{name\}/contributions
 
-Returns a [Entity Details Object](./objects.md#entity-details)
+Returns a **[Entity Details Object](./objects.md#entity-details)**
 
 ## Required Fields
 
@@ -50,7 +50,7 @@ curl https://api.vaunt.dev/v1/{provider}/entities/{name}/contributions?format=sv
 
 ## Get Entity Contributors  v1/\{provider\}/entities/\{name\}/contributors
 
-Returns a [Contributors Details Object](./objects.md#contributor-details)
+Returns a **[Contributors Details Object](./objects.md#contributor-details)**
 
 ### Required Fields
 
@@ -72,7 +72,7 @@ curl https://api.vaunt.dev/v1/{provider}/entities/{name}/contributors?format=svg
 
 ## Get Entity achievements  v1/\{provider\}/entities/\{name\}/achievements
 
-Returns a [Achievement Awarded Object](./objects.md#achievement-awarded-details)
+Returns a **[Achievement Awarded Object](./objects.md#achievement-awarded-details)**
 
 ### Required Fields
 
@@ -94,7 +94,7 @@ curl https://api.vaunt.dev/v1/{provider}/entities/{name}/achievements?format=svg
 
 ## Get Entity Keys v1/\{provider\}/entities/\{name\}/keys
 
-Returns a [Key Object](./objects.md#key)
+Returns a **[Key Object](./objects.md#key)**
 
 ### Required Fields
 
@@ -114,7 +114,7 @@ curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}
 
 ## Put Entity Keys v1/\{provider\}/entities/\{name\}/keys
 
-Sets a [Key Object](./objects.md#key) and returns the [Key Id](./objects.md#key-id)
+Sets a **[Key Object](./objects.md#key)** and returns the **[Key Id](./objects.md#key-id)**
 
 ### Required Fields
 
@@ -134,7 +134,7 @@ curl -X PUT -H "Authorization: Bearer <PROVIDER-TOKEN>" https://api.vaunt.dev/v1
 
 ## Get Entity Token v1/\{provider\}/entities/\{name\}/token
 
-Returns a [Token](./objects.md#token)
+Returns a **[Token](./objects.md#token)**
 
 ### Required Fields
 
@@ -154,7 +154,7 @@ curl -H "Authorization: Bearer <PROVIDER-TOKEN>" https://api.vaunt.dev/v1/{provi
 
 ## Get Entity Repositories  v1/\{provider\}/entities/\{name\}/repositories
 
-Returns a [Repository Details Object](./objects.md#repository-details)
+Returns a **[Repository Details Object](./objects.md#repository-details)**
 
 ### Required Fields
 
@@ -180,7 +180,7 @@ curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}
 
 ## Get Repository Contributors v1/\{provider\}/entities/\{name\}/repositories/\{repo_name\}/contributors
 
-Returns a [Contributors Details Object](./objects.md#contributor-details)
+Returns a **[Contributors Details Object](./objects.md#contributor-details)**
 
 ### Required Fields
 

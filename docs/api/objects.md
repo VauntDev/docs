@@ -22,17 +22,17 @@ Objects are returned from the API in JSON format using snake case.
 
 | field | type | description |
 |-------|------|-------------|
-| MetaData | Object, [MetaData](#meta-data) | Metadata about the response, **omittable** |
-| Data | []T | Array of type T, where T is a supported [Data Type](#data-types) |
-| Cursor | string | cursor used for [Pagination](./general_concepts.md#pagination), **omittable** |
-| Error | Object, [ErrorResponse](#error-response) | Error response containing information about the cause, **omittable** |
+| MetaData | Object, **[MetaData](#meta-data)** | Metadata about the response, **omittable** |
+| Data | []T | Array of type T, where T is a supported **[Data Type](#data-types)** |
+| Cursor | string | cursor used for **[Pagination](./general_concepts.md#pagination)**, **omittable** |
+| Error | Object, **[ErrorResponse](#error-response)** | Error response containing information about the cause, **omittable** |
 
 ## Meta Data
 
 | field | type | description |
 |-------|------|-------------|
 | Count | int | number of records in the response data array |
-| DataType | int | [Object type](#data-types) of data from in the response data array |
+| DataType | int | **[Object type](#data-types)** of data from in the response data array |
 
 ## Data Types
 
@@ -41,7 +41,7 @@ Data types is a metadata value that describes the type of data found in the
 | value | type |
 |-------|------|
 | 0 | Unknown |
-| 1 | [EntityDetails](#entity-details) |
+| 1 | **[EntityDetails](#entity-details)** |
 
 ## Entity Details
 
@@ -55,7 +55,7 @@ Data types is a metadata value that describes the type of data found in the
 | URL   | string | URL of the entity |
 | AvatarURL | string | URL pointing to the entities avatar icon |
 | Experience | int64 | entity experience level |
-| Contributions | Object, [ContributionSummary](#contribution-summary) | contribution summary for a entity, **omittable** |
+| Contributions | Object, **[ContributionSummary](#contribution-summary)** | contribution summary for a entity, **omittable** |
 | CreatedDttm | date time | Date entity was added to Vaunt. |
 | UpdatedDttm | date time | Last updated time to an entity in Vaunt. |
 
@@ -143,7 +143,7 @@ Data types is a metadata value that describes the type of data found in the
 | field | type | description |
 |-------|------|-------------|
 | Message | string | Human readable error message |
-| Code | int32,[ErrorCode](#error-codes) | internal error code |
+| Code | int32,**[ErrorCode](#error-codes)** | internal error code |
 
 ## Error Codes
 

@@ -7,7 +7,7 @@ title: Overview
 
 # Overview
 
-Vaunt is a developer relations platform that is designed to help developers connect, collaborate, and share experiences with each other.  
+Vaunt is a platform that helps developers showcase their work and connect with each other. It also provides organizations and repository owners tools for developer relations(DevRel), the practice of fostering meaningful relationships between developers and their products.
 
 Vaunt is designed for two primary audiences:
 

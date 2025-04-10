@@ -17,7 +17,11 @@ Community Boards offer multiple advantages for open-source projects and their ma
 Below is an example of a repository board showcasing key metrics and insights:
 
 <p align="center">
-  <img src={require('./assets/community_board.png').default} alt="Vaunt Community Board showing repository metrics including PR merge age, issue resolution time, and contribution activity" width="100%" style="max-width: 900px; border-radius: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.15);" />
+  <img src={require('./assets/community_board.png').default} alt="Vaunt Community Board showing repository metrics including PR merge age, issue resolution time, and contribution activity" width="100%" style={{
+      maxWidth: '900px',
+      borderRadius: '6px',
+      boxShadow: '0 3px 10px rgba(0,0,0,0.15)',
+    }} />
 </p>
 
 *Key components of a Community Board:*

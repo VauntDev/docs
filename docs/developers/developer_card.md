@@ -20,13 +20,16 @@ Profile cards summarize contributions and calculate a user experience level.
 
 These cards contain the following information
 
-- Pull Requests: count of pull requests
-- Reviews: count of pull request reviews
-- Commits: count of commits
-- Issues: count of issues
-- Stars: count of stars earned
-- Contributed to: count of unique repositories contributed to.
-- Level: level based on user experience
+
+These cards contain the following information 
+- **Pull Requests**: count of pull requests 
+- **Reviews**: count of pull request reviews  
+- **Commits**: count of commits 
+- **Issues**: count of issues 
+- **Stars**: count of stars earned 
+- **Contributed to**: count of unique repositories contributed to. 
+- **Level**: level based on user experience
+
 
 ## Setup
 

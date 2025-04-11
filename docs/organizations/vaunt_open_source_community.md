@@ -31,7 +31,6 @@ Below is an example of a repository board showcasing key metrics and insights:
 3. **Activity Visualization** - Monitor project momentum through star acquisition and contribution trends
 4. **Contributor Insights** - See unique contributor count and participation patterns over time
 
-
 ### How to install the Organization Board on readme profile?
 
 - Install **[Vaunt](https://github.com/marketplace/vaunt-dev)** from GitHub Marketplace.

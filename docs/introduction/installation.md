@@ -11,11 +11,11 @@ Developer Cards are now available!! Check out our announcement on our [blog](htt
 
 :::
 
-___
+---
 
 Vaunt can currently be installed as a GitHub Application. We will be adding more installation targets as we begin supporting more platforms with Vaunt.
 
-You can find our application [here](https://github.com/marketplace/vaunt-dev). We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
+You can find our application **[here](https://github.com/marketplace/vaunt-dev)**. We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
 
 <p>
     <img src={require('./assets/install_vaunt.png').default}  width="500" height="200"/>
@@ -23,7 +23,7 @@ You can find our application [here](https://github.com/marketplace/vaunt-dev). W
 
 ## Authentication and Authorization
 
-Vaunt authenticates as a Github App. You can learn more about GitHub App authentication [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/about-authentication-with-a-github-app).
+Vaunt authenticates as a Github App. You can learn more about GitHub App authentication **[here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/about-authentication-with-a-github-app)**.
 
 Below is an example screen for Authorizing Vaunt on your GitHub account and repositories.
 
@@ -45,15 +45,15 @@ We are committed to only leveraging the permissions we need in order for Vaunt t
 
 Vaunt can be uninstalled at any time by visiting your app installation settings.
 
-On GitHub, This can be found under `Settings->Installations` for users and `Settings->GitHub Apps` for organizations.  
+On GitHub, This can be found under `Settings->Installations` for users and `Settings->GitHub Apps` for organizations.
 
 :::
 
-___
+---
 
 :::info
 
-Consider joining our [discord](https://discord.gg/mn29Xkvry2) or following us on [Twitter](https://twitter.com/VauntDev)
+Consider joining our **[discord](https://discord.gg/mn29Xkvry2)** or following us on **[Twitter](https://twitter.com/VauntDev)**
 so you do not miss our official launch!
 
 :::

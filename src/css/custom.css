@@ -3,7 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap");
 
 /* You can override the default Infima variables here. */
 :root {
@@ -15,13 +15,13 @@
   --ifm-color-primary-lighter: #b1202b;
   --ifm-color-primary-lightest: #c82430;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Montserrat';
-  
+  --ifm-font-family-base: "Montserrat";
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   --ifm-color-primary: #e24f55;
   --ifm-color-primary-dark: #e24f55;
   --ifm-color-primary-darker: #de3b41;
@@ -29,8 +29,8 @@ html[data-theme='dark'] {
   --ifm-color-primary-light: #e56469;
   --ifm-color-primary-lighter: #e9797e;
   --ifm-color-primary-lightest: #ec8e92;
-  --ifm-background-color: #1f2a38	;
-  --ifm-background-surface-color: #18202B;
+  --ifm-background-color: #1f2a38;
+  --ifm-background-surface-color: #18202b;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 .redocusaurus pre {
@@ -38,5 +38,5 @@ html[data-theme='dark'] {
 }
 
 .footer--dark {
-  --ifm-footer-background-color: #18202B;
+  --ifm-footer-background-color: #18202b;
 }

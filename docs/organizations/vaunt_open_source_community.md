@@ -4,13 +4,32 @@ title: Vaunt Open Source Community
 sidebar_position: 2
 ---
 
-Vaunt Community Boards provide community statistics, repository insights, and a view into repository achievements. They can be used to track the growth and popularity of open-source projects, as well as to identify trends in the open-source community. They can also be used to showcase the contributions of individual developers and teams.
+Vaunt Community Boards provide comprehensive analytics and visibility for open-source projects. These boards display essential community statistics, detailed repository insights, and a showcase of repository achievements all in one place. Community Boards serve as a central dashboard where maintainers and contributors can monitor project health and engagement.
 
-Below is an example of a repository board.
+## Benefits and Use Cases
 
-<p>
-    <img src={require('./assets/community_board.png').default}  width="500" height="200"/>
+Community Boards offer multiple advantages for open-source projects and their maintainers:
+- **Track Growth**: Monitor the development and increasing popularity of your open-source projects over time through visual metrics and trends.
+- **Identify Trends**: Spot patterns in community engagement, contribution frequency, and other key performance indicators.
+- **Recognize Contributors**: Showcase the valuable contributions of individual developers and teams, fostering a culture of appreciation.
+- **Attract New Contributors**: A well-maintained Community Board demonstrates project activity and can help attract new developers to your project.
+- 
+Below is an example of a repository board showcasing key metrics and insights:
+
+<p align="center">
+  <img src={require('./assets/community_board.png').default} alt="Vaunt Community Board showing repository metrics including PR merge age, issue resolution time, and contribution activity" width="100%" style={{
+      maxWidth: '900px',
+      borderRadius: '6px',
+      boxShadow: '0 3px 10px rgba(0,0,0,0.15)',
+    }} />
 </p>
+
+*Key components of a Community Board:*
+
+1. **Repository Profile** - View essential repository information including license type, primary language, and engagement metrics like stars and forks
+2. **Performance Analytics** - Track efficiency metrics such as pull request merge age and issue resolution time
+3. **Activity Visualization** - Monitor project momentum through star acquisition and contribution trends
+4. **Contributor Insights** - See unique contributor count and participation patterns over time
 
 
 ### How to install the Organization Board on readme profile?

@@ -9,7 +9,7 @@ For example, you can set up notifications to be issued when a contributor earns 
 
 ## Example
 
-Below is the webhooks section of the VauntDev **[Example](https://github.com/VauntDev/example)** repository, which is configured to enable notifications for all achievements earned:
+Below is the webhooks section of the VauntDev [Example](https://github.com/VauntDev/example/discussions/8) repository, which is configured to enable notifications for all achievements earned:
 
 ```Yaml
 webhooks:

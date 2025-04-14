@@ -143,7 +143,8 @@ Data types is a metadata value that describes the type of data found in the
 | field   | type                                | description                  |
 | ------- | ----------------------------------- | ---------------------------- |
 | Message | string                              | Human readable error message |
-| Code    | int32,**[ErrorCode](#error-codes)** | internal error code          |
+| Code    | int32, **[ErrorCode](#error-codes)** | internal error code          |
+
 
 ## Error Codes
 

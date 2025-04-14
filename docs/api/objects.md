@@ -145,6 +145,7 @@ Data types is a metadata value that describes the type of data found in the
 | Message | string                              | Human readable error message |
 | Code    | int32, **[ErrorCode](#error-codes)** | internal error code          |
 
+
 ## Error Codes
 
 | value | type                   |

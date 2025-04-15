@@ -9,7 +9,8 @@ For example, you can set up notifications to be issued when a contributor earns 
 
 ## Example
 
-Below is the webhooks section of the VauntDev [Example](https://github.com/VauntDev/example) repository, which is configured to enable notifications for all achievements earned:
+Below is the webhooks section of the VauntDev **[Example](https://github.com/VauntDev/example)** repository, which is configured to enable notifications for all achievements earned:
+
 
 ```Yaml
 webhooks:
@@ -55,6 +56,7 @@ At this time, the name is not used anywhere except for your own organization.
 The `type` field is how you configure what the webhook should do.
 
 Types:
+
 - github - Send a notification to a github repository when the event occurs.
 
 Right now the only supported type is `github`, but we plan on adding additional types in the future.
@@ -72,8 +74,8 @@ Vaunt supports a discussion target that will be used to post comments when a web
 Example discussion object fields are explained below.
 
 - discussion
-    - repository - The repository owner/name to post the discussion comment on webhook events.
-    - title - The repository discussion title in which to post the discussion comment
+  - repository - The repository owner/name to post the discussion comment on webhook events.
+  - title - The repository discussion title in which to post the discussion comment
 
 To enable discussion comment posting for notifications, you must make sure the repository listed is one that is withing your Vaunt installation
 and that the repository has discussions enabled and a discussion with the listed title created.
@@ -87,5 +89,6 @@ The `value` field describes how to match on the type of the event.
 The possible types and their associated values are described below:
 
 Types:
+
 - achievements - The `achievement` event type is triggered when an achievement is awarded
-    - value - The value for an `achievement` is the name of the configured achievement in this repository.
+  - value - The value for an `achievement` is the name of the configured achievement in this repository.

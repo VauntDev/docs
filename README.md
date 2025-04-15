@@ -22,7 +22,7 @@ Welcome to the Vaunt documentation. This readme will guide you through the setup
 
 Vaunt is a platform designed to help developers showcase their work and connect with others. It also provides tools for organizations and repository owners to enhance developer relations (DevRel), fostering meaningful relationships between developers and their products.
 
-> **Note**: This documentation is built using [Docusaurus 2](https://docusaurus.io/).
+> **Note**: This documentation is built using [Docusaurus 3](https://docusaurus.io/).
 
 ## Prerequisites
 

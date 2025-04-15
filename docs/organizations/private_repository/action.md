@@ -4,9 +4,9 @@ title: Github Action
 sidebar_position: 2
 ---
 
-GitHub Actions provide a way to automate and customize workflows within a GitHub repository. Refer to the [GitHub documentation](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) for more information about how to create and use your own actions. Here we will discuss how we created the Vaunt action and what it does as well as how you can add it to your own repositories.
+GitHub Actions provide a way to automate and customize workflows within a GitHub repository. Refer to the **[GitHub documentation](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)** for more information about how to create and use your own actions. Here we will discuss how we created the Vaunt action and what it does as well as how you can add it to your own repositories.
 
-The Vaunt action is published on the GitHub Marketplace [here](https://github.com/marketplace/actions/vaunt-cards-action) and you may find the action source code in the repository [here](https://github.com/VauntDev/vaunt-cards-action). Once you have added the workflow you will also need to make sure that your repository gives Workflows Read and Write permissions as it uses this to check-in the contributors file. To do this in your repository go to settings->Actions->General and scroll down to the Workflow permissions section:
+The Vaunt action is published on the GitHub Marketplace **[here](https://github.com/marketplace/actions/vaunt-cards-action)** and you may find the action source code in the repository **[here](https://github.com/VauntDev/vaunt-cards-action)**. Once you have added the workflow you will also need to make sure that your repository gives Workflows Read and Write permissions as it uses this to check-in the contributors file. To do this in your repository go to settings->Actions->General and scroll down to the Workflow permissions section:
 
 <p>
     <img src={require('../assets/workflow_permissions.png').default} width="500" />
@@ -58,7 +58,7 @@ The workflow_dispatch status event is a way to have a workflow manually triggere
 
 This particular job checks out the current default branch, then calls the Vaunt Cards Action, which will update the contributors card at `.vaunt/cards/contributors.svg` and then check-in the updated file.
 
-Additionally, if you would prefer to keep your files in a separate branch you can modify the Checkout step to pick a specific branch of your repository to checkout.  For example, if you use an assets branch your Checkout step would look like this:
+Additionally, if you would prefer to keep your files in a separate branch you can modify the Checkout step to pick a specific branch of your repository to checkout. For example, if you use an assets branch your Checkout step would look like this:
 
 ```Yaml
     - name: Checkout

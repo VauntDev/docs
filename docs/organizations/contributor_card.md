@@ -3,11 +3,12 @@ sidebar_label: "Contributor Card"
 title: Contributor Card
 sidebar_position: 3
 ---
+
 <p>
   <img src="https://api.vaunt.dev/v1/github/entities/VauntDev/repositories/example/contributors?format=svg&limit=12" width="450" />
 </p>
 
-## Organization Level 
+## Organization Level
 
 Add the following code to the .github repository’s profile/README.md to display on the organization README, or anywhere else you would like it displayed. Also, replace \{org_name\} with your organization name
 
@@ -22,7 +23,7 @@ NOTE: By changing the limit, you can display more than 15 contributors by changi
 
 ## Repository level
 
-Add the following code to the repository README, or anywhere else you would like it displayed. Also, replace \{org_name\} with your organization name and \{repo_name\} with your repository name 
+Add the following code to the repository README, or anywhere else you would like it displayed. Also, replace \{org_name\} with your organization name and \{repo_name\} with your repository name
 
 ```html
 <p>

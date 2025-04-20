@@ -18,7 +18,7 @@ Vaunt can currently be installed as a GitHub Application. We will be adding more
 You can find our application **[here](https://github.com/marketplace/vaunt-dev)**. We will also be publishing a Market Place listing in the near future to make it easier to find Vaunt, and stay up to date on our development updates.
 
 <p>
-    <img src={require('./assets/install_vaunt.png').default}  width="500" height="200"/>
+    <img src={require('./assets/install_vaunt.gif').default} />
 </p>
 
 ## Authentication and Authorization
@@ -28,7 +28,7 @@ Vaunt authenticates as a Github App. You can learn more about GitHub App authent
 Below is an example screen for Authorizing Vaunt on your GitHub account and repositories.
 
 <p>
-    <img src={require('./assets/install_vaunt_permissions.png').default} width="500" height="750"/>
+    <img src={require('./assets/authorize-vaunt.gif').default}/>
 </p>
 
 :::tip

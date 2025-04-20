@@ -6,7 +6,7 @@ title: Routes
 
 ## Get Entity v1/\{provider\}/entities/\{name\}
 
-Returns a [Entity Details Object](./objects.md#entity-details)
+Returns a **[Entity Details Object](./objects.md#entity-details)**
 
 ### Required Url Parameters
 
@@ -25,9 +25,9 @@ Returns a [Entity Details Object](./objects.md#entity-details)
 curl api.vaunt.dev/v1/{provider}/entities/{name}
 ```
 
-## Get Entity Contributions  v1/\{provider\}/entities/\{name\}/contributions
+## Get Entity Contributions v1/\{provider\}/entities/\{name\}/contributions
 
-Returns a [Entity Details Object](./objects.md#entity-details)
+Returns a **[Entity Details Object](./objects.md#entity-details)**
 
 ## Required Fields
 
@@ -48,9 +48,9 @@ Returns a [Entity Details Object](./objects.md#entity-details)
 curl https://api.vaunt.dev/v1/{provider}/entities/{name}/contributions?format=svg,private=true
 ```
 
-## Get Entity Contributors  v1/\{provider\}/entities/\{name\}/contributors
+## Get Entity Contributors v1/\{provider\}/entities/\{name\}/contributors
 
-Returns a [Contributors Details Object](./objects.md#contributor-details)
+Returns a **[Contributors Details Object](./objects.md#contributor-details)**
 
 ### Required Fields
 
@@ -70,9 +70,9 @@ Returns a [Contributors Details Object](./objects.md#contributor-details)
 curl https://api.vaunt.dev/v1/{provider}/entities/{name}/contributors?format=svg&limit=10
 ```
 
-## Get Entity achievements  v1/\{provider\}/entities/\{name\}/achievements
+## Get Entity achievements v1/\{provider\}/entities/\{name\}/achievements
 
-Returns a [Achievement Awarded Object](./objects.md#achievement-awarded-details)
+Returns a **[Achievement Awarded Object](./objects.md#achievement-awarded-details)**
 
 ### Required Fields
 
@@ -94,7 +94,7 @@ curl https://api.vaunt.dev/v1/{provider}/entities/{name}/achievements?format=svg
 
 ## Get Entity Keys v1/\{provider\}/entities/\{name\}/keys
 
-Returns a [Key Object](./objects.md#key)
+Returns a **[Key Object](./objects.md#key)**
 
 ### Required Fields
 
@@ -104,7 +104,7 @@ Returns a [Key Object](./objects.md#key)
 ### Headers
 
 - Authorization: "Bearer \<YOUR-TOKEN\>"
-Required authorization using a Vaunt JWT.
+  Required authorization using a Vaunt JWT.
 
 ### Example
 
@@ -114,7 +114,7 @@ curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}
 
 ## Put Entity Keys v1/\{provider\}/entities/\{name\}/keys
 
-Sets a [Key Object](./objects.md#key) and returns the [Key Id](./objects.md#key-id)
+Sets a **[Key Object](./objects.md#key)** and returns the **[Key Id](./objects.md#key-id)**
 
 ### Required Fields
 
@@ -124,7 +124,7 @@ Sets a [Key Object](./objects.md#key) and returns the [Key Id](./objects.md#key-
 ### Headers
 
 - Authorization: "Bearer \<PROVIDER-TOKEN\>"
-Required authorization using a provider Personal Access Token.
+  Required authorization using a provider Personal Access Token.
 
 ### Example
 
@@ -134,7 +134,7 @@ curl -X PUT -H "Authorization: Bearer <PROVIDER-TOKEN>" https://api.vaunt.dev/v1
 
 ## Get Entity Token v1/\{provider\}/entities/\{name\}/token
 
-Returns a [Token](./objects.md#token)
+Returns a **[Token](./objects.md#token)**
 
 ### Required Fields
 
@@ -144,7 +144,7 @@ Returns a [Token](./objects.md#token)
 ### Headers
 
 - Authorization: "Bearer \<PROVIDER-TOKEN\>"
-Required authorization using a provider Personal Access Token.
+  Required authorization using a provider Personal Access Token.
 
 ### Example
 
@@ -152,9 +152,9 @@ Required authorization using a provider Personal Access Token.
 curl -H "Authorization: Bearer <PROVIDER-TOKEN>" https://api.vaunt.dev/v1/{provider}/entities/{name}/token
 ```
 
-## Get Entity Repositories  v1/\{provider\}/entities/\{name\}/repositories
+## Get Entity Repositories v1/\{provider\}/entities/\{name\}/repositories
 
-Returns a [Repository Details Object](./objects.md#repository-details)
+Returns a **[Repository Details Object](./objects.md#repository-details)**
 
 ### Required Fields
 
@@ -170,7 +170,7 @@ Returns a [Repository Details Object](./objects.md#repository-details)
 ### Headers
 
 - Authorization: "Bearer \<YOUR-TOKEN\>"
-Optional authorization using a Vaunt JWT to include private repositories.
+  Optional authorization using a Vaunt JWT to include private repositories.
 
 ### Example
 
@@ -180,7 +180,7 @@ curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/{provider}
 
 ## Get Repository Contributors v1/\{provider\}/entities/\{name\}/repositories/\{repo_name\}/contributors
 
-Returns a [Contributors Details Object](./objects.md#contributor-details)
+Returns a **[Contributors Details Object](./objects.md#contributor-details)**
 
 ### Required Fields
 
@@ -197,7 +197,7 @@ Returns a [Contributors Details Object](./objects.md#contributor-details)
 ### Headers
 
 - Authorization: "Bearer \<YOUR-TOKEN\>"
-Authorization required for private repositories.
+  Authorization required for private repositories.
 
 ### Example
 

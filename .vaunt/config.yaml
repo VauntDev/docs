@@ -1,0 +1,21 @@
+version: 0.0.1
+achievements:
+  # Releases
+  - achievement:
+      name: PR hero
+      icon: https://raw.githubusercontent.com/vauntdev/docs/main/.vaunt/git-pul.png
+      description: Congratulations on making PR for the Doc Sprint!
+      triggers:
+        - trigger:
+            actor: author
+            action: pull_request
+            condition: created_at >= 04-07-2025 & created_at <= 04-28-2025
+  - achievement:
+      name: Merge hero
+      icon: https://raw.githubusercontent.com/vauntdev/docs/main/.vaunt/git-merges.png
+      description: Congratulations, your PR is merged under the Doc Sprint!
+      triggers:
+        - trigger:
+            actor: author
+            action: pull_request
+            condition: merged = true & created_at >= 04-07-2025 & created_at <= 04-28-2025

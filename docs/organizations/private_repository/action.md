@@ -46,9 +46,9 @@ This is necessary to authenticate the workflow and verify your ownership or admi
 
 2. In your repository:
     - Go to Settings → **Secrets and variables** → Actions
-    <img src={require('../assets/acction_secret.png').default} width="500" />
+    <img src={require('../assets/action_secret.png').default} width="500" />
     - Click `New repository secret`
-    <img src={require('../assets/new_respo_secret.png').default} width="500" height="300"/>
+    <img src={require('../assets/new_repo_secret.png').default} width="500" height="300"/>
     - Name your secret (e.g., `VAUNT_GITHUB_TOKEN`) and paste the token value
 
 Your workflow file should reference this secret as a variable to the Vaunt Action:

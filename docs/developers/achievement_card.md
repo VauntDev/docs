@@ -3,6 +3,7 @@ sidebar_label: "Achievement Card"
 title: Achievement Card
 sidebar_position: 3
 ---
+Achievement Cards allow developers to showcase their accomplishments and milestones reached across GitHub repositories. These cards highlight your notable contributions, participation badges, and special recognitions earned through your open-source activities.
 
 Simply add the following lines and replace \{github_username\} with your username.
 

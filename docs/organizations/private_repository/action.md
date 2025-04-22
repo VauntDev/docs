@@ -1,26 +1,57 @@
 ---
-sidebar_label: "Github Action"
-title: Github Action
+sidebar_label: "Vaunt Action"
+title: Vaunt Action
+description: This document explains how the Vaunt Action works, how to set it up, and how to use it in your repositories
 sidebar_position: 2
 ---
 
-GitHub Actions provide a way to automate and customize workflows within a GitHub repository. Refer to the **[GitHub documentation](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)** for more information about how to create and use your own actions. Here we will discuss how we created the Vaunt action and what it does as well as how you can add it to your own repositories.
 
-The Vaunt action is published on the GitHub Marketplace **[here](https://github.com/marketplace/actions/vaunt-cards-action)** and you may find the action source code in the repository **[here](https://github.com/VauntDev/vaunt-cards-action)**. Once you have added the workflow you will also need to make sure that your repository gives Workflows Read and Write permissions as it uses this to check-in the contributors file. To do this in your repository go to settings->Actions->General and scroll down to the Workflow permissions section:
+In this section, you'll learn how the [Vaunt Action]((https://github.com/marketplace/actions/vaunt-cards-action)) works, how we built it, and how you can integrate it into your own repositories, including private ones.
 
-<p>
-    <img src={require('../assets/workflow_permissions.png').default} width="500" />
-</p>
+---
+## Overview
 
-The last thing to know, if you are installing this on a private repository you will need to generate a GitHub Personal Access Token and provide it as a secret to the Action as input. The authentication process is described in more detail in another blog, but for the purposes of this action you just need to know that you will use a GitHub token for input to validate that you are the owner or admin of the repository.
+Vaunt action is a [github action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) that is used to update the contributors card in your repository.
+It will:
 
-Once you have created a token as described here you can add the token as a repository secret to be provided as a parameter in the workflow. You can do this by going to settings in your repository and selecting Secrets and variables->actions:
+1. Make the API calls to Vaunt with optional authentication using a GitHub [personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+2. Update the contributors card in your repository
+3. Commit the card to an images directory e.g `.vaunt/cards`
+4. Reference the card in your README
 
-<p>
-    <img src={require('../assets/actions_secrets.png').default} width="500" />
-</p>
+## How to Add Vaunt Action to Your Repository
 
-Click the button that says New repository secret, give it a name that you will use in the workflow such as “PAT” for Personal Access Token, and paste the token string as the secret. Then in your workflow file, make sure that you have the token provided as input using the with field like this:
+To use the Vaunt Action:
+
+1. Add the workflow file to your repository
+2. Grant the workflow appropriate permissions:
+
+    - Go to your repository's **Settings** → **Actions** → **General**
+    - Scroll to the Workflow permissions section
+    - Ensure *"Read and write permissions"* is selected
+
+![Workflow Permissions](../assets/workflow_permission.png)
+
+## How to Use Vaunt Action with Private Repositories
+
+If you are using Vaunt Action on a private repository, you’ll need to generate a [GitHub Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and provide it as a secret variable to the repository.
+
+:::note
+This is necessary to authenticate the workflow and verify your ownership or admin access to the repository.
+:::
+
+### How to Generate and Add the Personal Access Token(PAT)
+
+1. Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) to create a GitHub Personal Access Token.
+
+2. In your repository:
+    - Go to Settings → **Secrets and variables** → Actions
+    <img src={require('../assets/action_secret.png').default} width="500" />
+    - Click `New repository secret`
+    <img src={require('../assets/new_repo_secret.png').default} width="500" height="300"/>
+    - Name your secret (e.g., `VAUNT_GITHUB_TOKEN`) and paste the token value
+
+Your workflow file should reference this secret as a variable to the Vaunt Action:
 
 ```Yaml
   with:
@@ -28,7 +59,11 @@ Click the button that says New repository secret, give it a name that you will u
     token: ${{ secrets.PAT }}
 ```
 
-## Workflow Explanation
+## Automating Contributors Cards with Vaunt Action
+
+This Vaunt action workflow is designed to update contributors' cards based on a set schedule or when manually triggered. It uses the `workflow_dispatch` event to manually trigger the workflow and a `cron schedule` to automatically trigger it at regular intervals.
+
+### Workflow: Vaunt Cards Update
 
 See the example Workflow below:
 
@@ -54,11 +89,27 @@ jobs:
         limit: 10
 ```
 
-The workflow_dispatch status event is a way to have a workflow manually triggered. In our case we want the workflow to start on a cron schedule and attempt to pull down the Vaunt status cards if they have updated. In this example it is using `cron: 30 * * * *` which means it will run every hour at 30 minutes after the hour. Feel free to adjust this to a time that you prefer. One thing to note about this workflow_dispatch method is that the action will only run when this is added to the default branch of your repository.
+#### Explanation
 
-This particular job checks out the current default branch, then calls the Vaunt Cards Action, which will update the contributors card at `.vaunt/cards/contributors.svg` and then check-in the updated file.
+- `workflow_dispatch`: Enables manual runs of the workflow directly from the GitHub UI. This is useful for testing or triggering updates on demand.
 
-Additionally, if you would prefer to keep your files in a separate branch you can modify the Checkout step to pick a specific branch of your repository to checkout. For example, if you use an assets branch your Checkout step would look like this:
+- `schedule` (cron: `30 * * * *`): Automatically runs the workflow every hour at 30 minutes past the hour. You can adjust this schedule as needed (see Cron Syntax).
+
+:::note
+The scheduled or manual trigger (`workflow_dispatch`) will only work if this workflow file is added to the default branch of your repository.
+:::
+
+- `jobs` Breakdown:
+
+   1. **Checkout the repository**: The job first checks out the current default branch of the repository using the actions/checkout action. This step ensures the workflow has access to the latest code and files.
+   2. **Update Vaunt Cards**: Next, the workflow runs the Vaunt Cards Action (VauntDev/vaunt-cards-action@main).
+        This action:
+       - Updates the contributors card located at .vaunt/cards/contributors.svg
+       - Checks in the updated file back into the repository
+
+:::tip
+if you would prefer to keep your files in a separate , you can modify the `Checkout` step to pick a specific branch of your repository to checkout.  For example, if you use an assets branch your Checkout step would look like this:
+
 
 ```Yaml
     - name: Checkout
@@ -66,28 +117,43 @@ Additionally, if you would prefer to keep your files in a separate branch you ca
       with: { ref: assets }
 ```
 
-There are also two optional input values you can set on the vaunt-cards-action. The first value is token which sets the GitHub Personal Access Token to use for authentication if you want to run this action on a private repository. This should be the name of the repository secret that was explained earlier. The other input value is limit, and this sets the maximum number of contributors to include in the response. By default it uses 10, but this value can be set to up to 100 to return the maximum number of contributors.
+:::
 
-Using the Card
+There are two optional values you can configure for the `vaunt-cards-action`:
 
-Once you have the workflow up and running you will now have a location where the contributors.svg file is being updated and you can reference this file in your repository readme. One way to do this is with a simple markdown image link. Assuming you have the card on your main branch you would do that by adding the following to your readme:
+1. **`token`**: This is the GitHub Personal Access Token (PAT) used for authentication when running the action on a private repository. The token should be stored as a repository secret, as explained earlier in this guide.
 
-```Markdown
-![Contributors](.vaunt/cards/contributors.svg)
-```
+2. **`limit`**: This sets the maximum number of contributors to include in the contributors card. By default, the value is `10`, but you can increase it to a maximum of `100` to display more contributors.
 
-If you placed you setup your workflow to checkout and place the image in a separate branch then you can still use a markdown link, but you must use the full url path:
+These values allow you to customize the behavior of the action based on your repository's needs.
 
-```Markdown
-![Contributors](https://github.com/<owner>/<repo>/blob/<branch>/.vaunt/cards/contributors.svg)
-```
+## How to Display the Contributors' Cards
 
-If you would like a bit more control over the display of the image you can embed an html img link in your readme also using the full url path:
+Once the workflow is set up and running, the `contributors.svg` card will be automatically updated and stored in your repository. You can display this card in your repository’s `README.md` file using one of the following methods:
 
-```HTML
-<p>
-    <a href="https://vaunt.dev">
-        <img src="https://github.com/<owner>/<repo>/blog/<branch>/.vaunt/cards/contributors.svg" width="350" />
-    </a>
-</p>
-```
+1. **For the Default Branch (e.g., `main`)**  
+   Use a simple Markdown image tag to reference the card:
+
+   ```markdown
+   ![Contributors](.vaunt/cards/contributors.svg)
+   ```
+
+2. **For a Non-Main Branch**
+
+    If the card is stored in a different branch, use the full GitHub URL to reference it:
+
+    ```markdown
+    ![Contributors] (https://github.com/<owner>/<repo>/blob/<branch>/.vaunt/cards/contributors.svg) // Replace <owner>, <repo>, and <branch> with your actual repository details
+    ```
+
+3. **Using an HTML Image Tag**
+
+    For more control over the display (e.g., size), you can embed the card using an HTML `<img>` tag:
+
+    ```HTML
+    <p>
+        <a href="https://vaunt.dev">
+            <img src="https://github.com/<owner>/<repo>/blog/<branch>/.vaunt/cards/contributors.svg" width="350" />  // Replace <owner>, <repo>, and <branch> with your actual repository details
+        </a>
+    </p>
+    ```

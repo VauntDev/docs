@@ -81,7 +81,6 @@ Developers Cards are a new way for developers to showcase their experience and c
 <a href="https://community.vaunt.dev/board/simonmazzaroth">
         <img src="https://api.vaunt.dev/v1/github/entities/simonmazzaroth/contributions?format=svg" width="300" title="Includes public contributions"/>
     </a>
-
 </p>
 
 Over time, we will be adding more flexibility and customization for developers to create personalized cards. We have initially added support for GitHub and will be evaluating adding other VCS vendors in the future

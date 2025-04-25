@@ -84,7 +84,7 @@ The url to an icon image to use for the achievement. This can be displayed when 
 
 ### Achievement Description
 
-A description of the achievement that can be shown as *hovertext* when showcasing. The discription will be only displayed on Vaunt open source community. We recommend a maximum of **100 characters**.
+A description of the achievement that can be shown as _hovertext_ when showcasing. The discription will be only displayed on Vaunt open source community. We recommend a maximum of **100 characters**.
 
 ### Achievement Type
 
@@ -96,7 +96,7 @@ The current supported types are:
 - **ongoing** (default)
 - **once**
 
-An achievement of type *"ongoing"* is one that can be earned at any time that a user qualifies for it. The conditions
+An achievement of type _"ongoing"_ is one that can be earned at any time that a user qualifies for it. The conditions
 for this achievement will be checked periodically and awards granted to users when they meet the contribution
 requirements.
 
@@ -129,8 +129,8 @@ There are several fields to a trigger that allow you to customize the exact requ
 
 The **Actor** controls the subject of the condition. For most actions this will be the author. However, for `pull_request` specifically this can also be set to reviewers or assignees and for issues this may be set to `resolved_by`.
 
-| Actor       | Supported Actions                                     |
-| ----------- | ----------------------------------------------------- |
+| Actor           | Supported Actions                                     |
+| --------------- | ----------------------------------------------------- |
 | **author**      | pull_request, review, commit, issue, discussion, star |
 | **resolved_by** | issue                                                 |
 | **assignees**   | pull_request, issue                                   |
@@ -140,8 +140,8 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 **Action** defines the contribution action that this trigger uses.
 
-| Action               | description                                                   |
-| -------------------- | ------------------------------------------------------------- |
+| Action                   | description                                                   |
+| ------------------------ | ------------------------------------------------------------- |
 | **pull_request**         | create actions related to opening or merging pull requests    |
 | **review**               | create actions related to reviewing pull requests             |
 | **commit**               | create actions related to authoring commits                   |
@@ -154,8 +154,8 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 #### Pull Request Fields
 
-| field         | type         | description                                           |
-| ------------- | ------------ | ----------------------------------------------------- |
+| field             | type         | description                                           |
+| ----------------- | ------------ | ----------------------------------------------------- |
 | **merged**        | bool         | whether the pull request has been merged              |
 | **closed**        | bool         | whether the pull request has been closed              |
 | **comments**      | int          | number of comments on the pull request                |
@@ -174,15 +174,15 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 #### Review Fields
 
-| field      | type         | description                                           |
-| ---------- | ------------ | ----------------------------------------------------- |
+| field          | type         | description                                           |
+| -------------- | ------------ | ----------------------------------------------------- |
 | **created_at** | date         | the date the review was created                       |
 | **actor**      | string array | list of users to include or exclude from this trigger |
 
 #### Commit Fields
 
-| field         | type         | description                                           |
-| ------------- | ------------ | ----------------------------------------------------- |
+| field             | type         | description                                           |
+| ----------------- | ------------ | ----------------------------------------------------- |
 | **additions**     | int          | number of commit addition                             |
 | **deletions**     | int          | number of commit deletions                            |
 | **changed_files** | int          | number of changed files                               |
@@ -191,8 +191,8 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 #### Issue Fields
 
-| field      | type         | description                                                                      |
-| ---------- | ------------ | -------------------------------------------------------------------------------- |
+| field          | type         | description                                                                      |
+| -------------- | ------------ | -------------------------------------------------------------------------------- |
 | **closed**     | bool         | whether the issue has been closed                                                |
 | **comments**   | int          | number of comments on the issue                                                  |
 | **reactions**  | int          | number of reactions on the issue                                                 |
@@ -206,8 +206,8 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 #### Issue Comment Fields
 
-| field      | type         | description                                           |
-| ---------- | ------------ | ----------------------------------------------------- |
+| field          | type         | description                                           |
+| -------------- | ------------ | ----------------------------------------------------- |
 | **reactions**  | int          | number of reactions on the issue                      |
 | **emojis**     | string array | list of reaction emojis on the issue comment          |
 | **reactors**   | string array | list of users that have reacted to the comment        |
@@ -216,8 +216,8 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 #### Pull Request Comment Fields
 
-| field      | type         | description                                           |
-| ---------- | ------------ | ----------------------------------------------------- |
+| field          | type         | description                                           |
+| -------------- | ------------ | ----------------------------------------------------- |
 | **reactions**  | int          | number of reactions on the issue                      |
 | **emojis**     | string array | list of reaction emojis on the pull request comment   |
 | **reactors**   | string array | list of users that have reacted to the comment        |
@@ -226,8 +226,8 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 #### Discussion Fields
 
-| field      | type         | description                                           |
-| ---------- | ------------ | ----------------------------------------------------- |
+| field          | type         | description                                           |
+| -------------- | ------------ | ----------------------------------------------------- |
 | **closed**     | bool         | whether the discussion has been closed                |
 | **comments**   | int          | number of comments on the discussion                  |
 | **upvotes**    | int          | number of upvotes on the discussion                   |
@@ -238,16 +238,16 @@ The **Actor** controls the subject of the condition. For most actions this will 
 
 #### Star Fields
 
-| field      | type         | description                                           |
-| ---------- | ------------ | ----------------------------------------------------- |
+| field          | type         | description                                           |
+| -------------- | ------------ | ----------------------------------------------------- |
 | **starred**    | bool         | whether the repository was starred                    |
 | **created_at** | date         | the date the star was given                           |
 | **actor**      | string array | list of users to include or exclude from this trigger |
 
 ### Point fields
 
-| field  | type         | description                                           |
-| ------ | ------------ | ----------------------------------------------------- |
+| field      | type         | description                                           |
+| ---------- | ------------ | ----------------------------------------------------- |
 | **points** | int          | number of points the user has earned                  |
 | **actor**  | string array | list of users to include or exclude from this trigger |
 

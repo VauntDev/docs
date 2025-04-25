@@ -140,11 +140,10 @@ Data types is a metadata value that describes the type of data found in the
 
 ## Error Response
 
-| field   | type                                | description                  |
-| ------- | ----------------------------------- | ---------------------------- |
-| Message | string                              | Human readable error message |
+| field   | type                                 | description                  |
+| ------- | ------------------------------------ | ---------------------------- |
+| Message | string                               | Human readable error message |
 | Code    | int32, **[ErrorCode](#error-codes)** | internal error code          |
-
 
 ## Error Codes
 

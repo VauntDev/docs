@@ -16,7 +16,8 @@ To create a token for validating your organization admin status and retrieving d
 ![Organization PAT permissions](../assets/organization_permissions.png)
 
 :::note
- only organization administrators can create tokens for organization attestation.
+ Only organization administrators can create tokens for organization attestation.
+:::
 
 After generating a token you can use the token value with the `Authorization` header in requests to the Vaunt API.
 

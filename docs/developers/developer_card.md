@@ -18,7 +18,6 @@ Over time, we will be adding more flexibility and customization for developers t
 
 Profile cards summarize contributions and calculate a user experience level.
 
-
 These cards contain the following information:
 
 - **Pull Requests:** Total number of pull requests submitted
@@ -28,8 +27,6 @@ These cards contain the following information:
 - **Stars:** Total number of stars received across repositories
 - **Contributed to:** Count of unique repositories the user has contributed to
 - **Level:** A calculated experience level based on overall contributions
-
-
 
 ## Setup
 
@@ -70,9 +67,11 @@ You can also feel free to adjust the width of the SVG cards.
 You can find a complete readme example **[here](https://github.com/simonmazzaroth/simonmazzaroth/blob/main/README.md)**.
 
 ---
+
 sidebar_label: "Developer Card"
 title: Developer Card
 sidebar_position: 2
+
 ---
 
 Developers Cards are a new way for developers to showcase their experience and contributions to repositories. The primary goal of developer cards is to provide more visibility into how a developer is engaging with various public or private projects.
@@ -136,4 +135,3 @@ Here is an updated example **including** private contributions.
 You can also feel free to adjust the width of the SVG cards.
 
 You can find a complete readme example [here](https://github.com/simonmazzaroth/simonmazzaroth/blob/main/README.md).
-

@@ -28,7 +28,7 @@ To use the Vaunt Action:
 
    - Go to your repository's **Settings** → **Actions** → **General**
    - Scroll to the Workflow permissions section
-   - Ensure _"Read and write permissions"_ is selected
+   - Ensure *"Read and write permissions"* is selected
 
 ![Workflow Permissions](../assets/workflow_permission.png)
 

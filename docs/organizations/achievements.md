@@ -84,7 +84,7 @@ The url to an icon image to use for the achievement. This can be displayed when 
 
 ### Achievement Description
 
-A description of the achievement that can be shown as _hovertext_ when showcasing. The discription will be only displayed on Vaunt open source community. We recommend a maximum of **100 characters**.
+A description of the achievement that can be shown as *hovertext* when showcasing. The discription will be only displayed on Vaunt open source community. We recommend a maximum of **100 characters**.
 
 ### Achievement Type
 
@@ -96,7 +96,7 @@ The current supported types are:
 - **ongoing** (default)
 - **once**
 
-An achievement of type _"ongoing"_ is one that can be earned at any time that a user qualifies for it. The conditions
+An achievement of type *"ongoing"* is one that can be earned at any time that a user qualifies for it. The conditions
 for this achievement will be checked periodically and awards granted to users when they meet the contribution
 requirements.
 

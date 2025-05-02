@@ -24,7 +24,7 @@ Community Boards offer multiple advantages for open-source projects and their ma
     }} />
 </p>
 
-_Key components of a Community Board:_
+*Key components of a Community Board:*
 
 1. **Repository Profile** - View essential repository information including license type, primary language, and engagement metrics like stars and forks
 2. **Performance Analytics** - Track efficiency metrics such as pull request merge age and issue resolution time

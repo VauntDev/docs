@@ -5,7 +5,7 @@ description: This document explains how the Vaunt Action works, how to set it up
 sidebar_position: 2
 ---
 
-In this section, you'll learn how the [Vaunt Action](<(https://github.com/marketplace/actions/vaunt-cards-action)>) works, how we built it, and how you can integrate it into your own repositories, including private ones.
+In this section, you'll learn how the [Vaunt Action](https://github.com/marketplace/actions/vaunt-cards-action) works, how we built it, and how you can integrate it into your own repositories, including private ones.
 
 ---
 

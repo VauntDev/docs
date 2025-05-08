@@ -9,12 +9,12 @@ Vaunt Community Boards provide comprehensive analytics and visibility for open-s
 ## Benefits and Use Cases
 
 Community Boards offer multiple advantages for open-source projects and their maintainers:
+
 - **Track Growth**: Monitor the development and increasing popularity of your open-source projects over time through visual metrics and trends.
 - **Identify Trends**: Spot patterns in community engagement, contribution frequency, and other key performance indicators.
 - **Recognize Contributors**: Showcase the valuable contributions of individual developers and teams, fostering a culture of appreciation.
 - **Attract New Contributors**: A well-maintained Community Board demonstrates project activity and can help attract new developers to your project.
-- 
-Below is an example of a repository board showcasing key metrics and insights:
+- Below is an example of a repository board showcasing key metrics and insights:
 
 <p align="center">
   <img src={require('./assets/community_board.png').default} alt="Vaunt Community Board showing repository metrics including PR merge age, issue resolution time, and contribution activity" width="100%" style={{

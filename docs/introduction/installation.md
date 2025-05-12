@@ -31,6 +31,15 @@ Below is an example screen for Authorizing Vaunt on your GitHub account and repo
     <img src={require('./assets/authorize-vaunt.gif').default}/>
 </p>
 
+
+Here's a quick video walkthrough on how to install and authorize Vaunt:
+
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Chz6ADuhyN4?si=OoYULrnut0Uxl2A_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+
+
+
 :::tip
 
 We recommend installing Vaunt on all owned repositories. This ensures that your contributions are counted accurately. That said, by default all public contributions will be counted.

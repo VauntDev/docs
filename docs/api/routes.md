@@ -25,7 +25,7 @@ The response follows the [standard API format](./general_concepts.md#response-fo
 #### Example Request
 
 ```bash
-curl -X GET "https://api.vaunt.dev/v1/github/entities/ade555"
+curl -X GET "https://api.vaunt.dev/v1/github/entities/simonmazzaroth"
 ```
 
 #### Example Response Data
@@ -34,24 +34,24 @@ curl -X GET "https://api.vaunt.dev/v1/github/entities/ade555"
 {
   "data": [
     {
-      "id": "a11714ef-86fe-4bd2-a889-a87bae661d67",
+      "id": "75482228-c3e7-494a-aee9-eb2cfc4f269a",
       "provider": "github",
       "type": "user",
-      "name": "ade555",
-      "display_name": "",
-      "url": "https://api.github.com/users/ade555",
-      "avatar_url": "https://avatars.githubusercontent.com/u/68414111?v=4",
+      "name": "simonmazzaroth",
+      "display_name": "Simon Cheng",
+      "url": "https://api.github.com/users/simonmazzaroth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111379562?v=4",
       "website": "",
       "socials": {
         "socials": []
       },
-      "description": "",
-      "followers": 0,
-      "following": 0,
+      "description": "I'm a DevRel at Vaunt.",
+      "followers": 6,
+      "following": 7,
       "experience": 0,
       "level": 0,
-      "created_dttm": "2024-07-09T21:04:06Z",
-      "updated_dttm": "2025-04-24T16:49:57Z"
+      "created_dttm": "2024-06-19T18:50:32Z",
+      "updated_dttm": "2025-05-12T06:14:36Z"
     }
   ]
 }
@@ -78,7 +78,7 @@ The response follows the [standard API format](./general_concepts.md#response-fo
 #### Example Request
 
 ```bash
-curl -X GET "https://api.vaunt.dev/v1/github/entities/ade555/contributions?format=svg&private=true"
+curl -X GET "https://api.vaunt.dev/v1/github/entities/simonmazzaroth/contributions?format=svg&private=true"
 ```
 
 #### Example Response Data
@@ -89,34 +89,34 @@ The following is an example response data in JSON format:
 {
   "data": [
     {
-      "id": "a11714ef-86fe-4bd2-a889-a87bae661d67",
+      "id": "75482228-c3e7-494a-aee9-eb2cfc4f269a",
       "provider": "github",
       "type": "user",
-      "name": "ade555",
-      "display_name": "",
-      "url": "https://api.github.com/users/ade555",
-      "avatar_url": "https://avatars.githubusercontent.com/u/68414111?",
+      "name": "simonmazzaroth",
+      "display_name": "Simon Cheng",
+      "url": "https://api.github.com/users/simonmazzaroth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111379562?v=4",
       "website": "",
       "socials": null,
       "description": "",
       "followers": 0,
       "following": 0,
-      "experience": 83,
-      "level": 1,
+      "experience": 284,
+      "level": 2,
       "contributions": {
-        "commits": 0,
-        "issues": 5,
+        "commits": 197,
+        "issues": 7,
         "pull_requests": 17,
-        "reviews": 16,
-        "stars": 2,
-        "contributed_to": 43,
-        "issues_closed": 4,
-        "pull_requests_merged": 10,
-        "discussions": 0,
+        "reviews": 13,
+        "stars": 9,
+        "contributed_to": 24,
+        "issues_closed": 2,
+        "pull_requests_merged": 14,
+        "discussions": 1,
         "discussions_answered": 0
       },
-      "created_dttm": "2024-07-09T21:04:06Z",
-      "updated_dttm": "2025-04-24T23:56:48Z"
+      "created_dttm": "2024-06-19T18:50:32Z",
+      "updated_dttm": "2025-05-12T06:14:36Z"
     }
   ]
 }
@@ -177,22 +177,24 @@ The response follows the [standard API format](./general_concepts.md#response-fo
 #### Example Request
 
 ```bash
-https://api.vaunt.dev/v1/github/entities/jeff1010322/achievements?limit=30&format=svg
+curl -X GET https://api.vaunt.dev/v1/github/entities/simonmazzaroth/achievements?limit=30&format=svg
 ```
 
 #### Example Response Data
 
 ```json
- "data": [
-  {
+{
+  "data": [
+    {
       "id": "90d822c9-6f35-4d4e-8bfa-07e7c70d7807",
       "repository_name": "docs",
       "name": "Merge hero",
       "icon_url": "https://raw.githubusercontent.com/vauntdev/docs/main/.vaunt/merge_hero.png",
       "description": "Congratulations, your PR is merged under the Doc Sprint!",
-      "awarded_dttm": "2025-04-21T16:11:34Z"
-  },
- ]
+      "awarded_dttm": "2025-04-16T09:31:00Z"
+    }
+  ]
+}
 ```
 
 ## Authenticated APIs
@@ -296,34 +298,36 @@ The response follows the [standard API format](./general_concepts.md#response-fo
 #### Example Request
 
 ```bash
-curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/github/entities/ade555/repositories?limit=10
+curl -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/github/entities/simonmazzaroth/repositories?limit=10
 ```
 
 #### Example Response Data
 
 ```json
-"data": [
-  {
-      "id": "repo_id",
+{
+  "data": [
+    {
+      "id": "0432e4e2-b567-497c-9a04-ab848bcdff13",
       "provider": "github",
-      "owner": "your_username",
-      "name": "repository-name",
-      "url": "repository_url",
+      "owner": "simonmazzaroth",
+      "name": "serverpod",
+      "url": "https://api.github.com/repos/simonmazzaroth/serverpod",
       "deleted": false,
       "fork": true,
       "forks": 0,
-      "private": true,
-      "description": "",
-      "language": "JavaScript",
+      "private": false,
+      "description": "Serverpod is a next-generation app and web server, explicitly built for the Flutter and Dart ecosystem.",
+      "language": "",
       "open_issues": 0,
       "stars": 0,
-      "size": 355,
-      "license": "",
+      "size": 12216,
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "default_branch_name": "",
-      "created_dttm": "2025-05-04T00:39:34Z",
-      "updated_dttm": "2025-05-07T22:57:49Z"
-  }
-]
+      "created_dttm": "2024-12-04T20:16:58Z",
+      "updated_dttm": "2025-05-12T06:23:44Z"
+    }
+  ]
+}
 ```
 
 ### Get Repository Contributors
@@ -347,23 +351,25 @@ The response follows the [standard API format](./general_concepts.md#response-fo
 #### Example Request
 
 ```bash
-curl  -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/github/entities/ade555/repositories/BlogBridger/contributors?limit=10&format=svg
+curl  -H "Authorization: Bearer <YOUR-TOKEN>" https://api.vaunt.dev/v1/github/entities/VauntDev/repositories/example/contributors?limit=10&format=svg
 ```
 
 #### Example Response Data
 
 ```json
-"data": [
-  {
-      "id": "a11714ef-86fe-4bd2-a889-a87bae661d67",
+{
+  "data": [
+    {
+      "id": "18da114c-a543-45c8-a759-06ca6d136e91",
       "provider": "github",
       "type": "user",
-      "name": "ade555",
-      "display_name": "SuperheroJT",
-      "url": "https://api.github.com/users/ade555",
-      "avatar_url": "https://avatars.githubusercontent.com/u/68414111?v=4",
-      "contributions": 62,
-      "created_dttm": "2024-07-09T21:04:06Z"
-  }
-],
+      "name": "elewis787",
+      "display_name": "Ethan M Lewis",
+      "url": "https://api.github.com/users/elewis787",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10167943?v=4",
+      "contributions": 33,
+      "created_dttm": "2024-06-19T18:50:47Z"
+    }
+  ]
+}
 ```

@@ -7,7 +7,7 @@ sidebar_position: 2
 
 :::info
 
-Developer Cards are now available!! Check out our announcement on our [blog](https://blog.vaunt.dev/preview/6422751ff9009500083d142c) for more information.
+Developer Cards are now available!! Check out our announcement on our [blog](https://blog.vaunt.dev/showcasing-developer-contributions) for more information.
 
 :::
 

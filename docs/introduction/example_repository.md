@@ -7,7 +7,7 @@ sidebar_position: 3
 
 ## Achievement Configuration in Example and TQLA Repositories
 
-At Vaunt, we've set up achievements in the **[Example](https://github.com/VauntDev/example?tab=readme-ov-file#available-awards)** and **[TQLA](https://github.com/VauntDev/example)** repositories to showcase how Vaunt facilates open-source community building and engagment.
+At Vaunt, we've set up achievements in the **[Example](https://github.com/VauntDev/example?tab=readme-ov-file#available-awards)** and **[TQLA](https://github.com/VauntDev/tqla/tree/main)** repositories to showcase how Vaunt facilates open-source community building and engagment.
 
 <p>
     <img src={require('./assets/achievement-vaunt.png').default} width="500" />
